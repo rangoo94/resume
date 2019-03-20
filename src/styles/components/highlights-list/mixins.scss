@@ -1,0 +1,52 @@
+@import './config';
+
+// Mixins
+
+@mixin highlights-list-base () {
+  > ul {
+    @extend %semantic-list;
+    display: flex;
+    width: 100%;
+
+    > li {
+      flex: 1 0;
+      text-align: center;
+      font-weight: $highlights-list-label-font-weight;
+
+      > strong {
+        display: block;
+        font-size: 1.5em;
+        font-weight: $highlights-list-header-font-weight;
+      }
+    }
+  }
+}
+
+@mixin highlights-list-spacing ($spacing: $highlights-list-spacing) {
+  padding-top: $spacing;
+
+  > ul > li {
+    padding-bottom: $spacing;
+  }
+}
+
+@mixin highlights-list-border (
+  $width: $highlights-list-border-width,
+  $color: $highlights-list-border-color
+) {
+  border-style: solid;
+  border-color: $color;
+  border-width: $width 0;
+}
+
+// Complex mixin
+
+@mixin highlights-list (
+  $border-width: $highlights-list-border-width,
+  $border-color: $highlights-list-border-color,
+  $spacing: $highlights-list-spacing
+) {
+  @include highlights-list-base;
+  @include highlights-list-border($width: $border-width, $color: $border-color);
+  @include highlights-list-spacing($spacing: $spacing);
+}

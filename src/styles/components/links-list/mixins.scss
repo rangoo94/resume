@@ -1,0 +1,56 @@
+@import './config';
+
+// Mixins
+
+@mixin links-list-link-style ($pseudo-class: null) {
+  $selector: if($pseudo-class == null, '', unquote(':#{$pseudo-class}'));
+
+  > li > a#{$selector} {
+    @content;
+  }
+}
+
+@mixin links-list-base () {
+  @extend %semantic-list;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include links-list-link-style() {
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  @include links-list-link-style('hover') {
+    text-decoration: none;
+  }
+}
+
+@mixin links-list-link-spacing ($link-spacing: $links-list-link-spacing) {
+  > li + li {
+    margin-left: $link-spacing;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: $link-spacing;
+    }
+  }
+}
+
+@mixin links-list-text-color ($text-color, $pseudo-class: null) {
+  @include links-list-link-style($pseudo-class) {
+    color: $text-color;
+  }
+}
+
+// Complex mixin
+
+@mixin links-list (
+  $link-spacing: $links-list-link-spacing,
+  $link-text-color: $links-list-link-text-color,
+  $link-hover-text-color: $links-list-link-hover-text-color
+) {
+  @include links-list-base;
+  @include links-list-link-spacing($link-spacing: $link-spacing);
+  @include links-list-text-color($text-color: $link-text-color);
+  @include links-list-text-color($text-color: $link-hover-text-color, $pseudo-class: 'hover');
+}

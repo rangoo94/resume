@@ -1,0 +1,74 @@
+@import './config';
+
+// Mixins
+
+@mixin block-link-base () {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin block-link-spacing ($space: $block-link-horizontal-margin) {
+  margin-left: $space;
+  margin-right: $space;
+}
+
+@mixin block-link-border ($radius: $block-link-border-radius) {
+  border-radius: $radius;
+}
+
+@mixin block-link-icon-margin ($margin: $block-link-icon-margin) {
+  > .fab:first-child {
+    margin-right: $margin;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: $margin;
+    }
+  }
+}
+
+@mixin block-link-padding (
+  $padding-vertical: $block-link-padding-vertical,
+  $padding-horizontal: $block-link-padding-horizontal
+) {
+  padding: $padding-vertical $padding-horizontal;
+}
+
+@mixin block-link-colors (
+  $background-color: $block-link-background-color,
+  $text-color: $block-link-text-color
+) {
+  background: $background-color;
+  color: $text-color;
+}
+
+// Complex mixin
+
+@mixin block-link (
+  $horizontal-margin: $block-link-horizontal-margin,
+  $background-color: $block-link-background-color,
+  $text-color: $block-link-text-color,
+  $border-radius: $block-link-border-radius,
+  $padding-vertical: $block-link-padding-vertical,
+  $padding-horizontal: $block-link-padding-horizontal,
+  $icon-margin: $block-link-icon-margin,
+  $hover-background-color: $block-link-hover-background-color,
+  $hover-text-color: $block-link-hover-text-color
+) {
+  @include block-link-base;
+  @include block-link-padding($padding-vertical: $padding-vertical, $padding-horizontal: $padding-horizontal);
+  @include block-link-colors($background-color: $background-color, $text-color: $text-color);
+  @include block-link-border($radius: $border-radius);
+  @include block-link-spacing($space: $horizontal-margin);
+  @include block-link-icon-margin($margin: $icon-margin);
+
+  &:hover {
+    @include block-link-colors($background-color: $hover-background-color, $text-color: $hover-text-color);
+  }
+}

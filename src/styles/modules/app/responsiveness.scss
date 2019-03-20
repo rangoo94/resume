@@ -1,0 +1,224 @@
+// TODO: base this file on variables
+
+// Remove stripes on smaller screen,
+// where it will not be visible anyway.
+
+@media (max-width: 1350px) {
+  body {
+    background-image: none;
+  }
+
+  .app-top-navigation::after {
+    display: none;
+  }
+
+  .app-top-background::after {
+    display: none;
+  }
+}
+
+// Make full-width content
+
+$full-container-width: $container-max-width * 100% / $container-max-width-percentage;
+
+@media (max-width: $full-container-width) {
+  %container {
+    max-width: initial;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .app-content {
+    border: 0;
+  }
+
+  .app-top-navigation__content,
+  .app-footer {
+    width: $container-max-width-percentage;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app-top-background {
+    &-side-1, &-side-2 {
+      display: none;
+    }
+  }
+}
+
+// Remove my photo from header,
+// as it's messing with text content.
+
+@media (max-width: 1040px) {
+  .app-header__photo {
+    display: none;
+  }
+}
+
+// Remove colorful mode on smaller devices
+
+@media (max-width: 870px) {
+  .colorful-mode {
+    display: none;
+  }
+}
+
+// Change overall size of website
+
+@media (max-width: 865px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+// Move links from header to two lines
+
+@media (max-width: 860px) {
+  .app-top-navigation {
+    min-height: initial;
+  }
+
+  .app-header {
+    height: auto;
+    padding: 40px 0 20px;
+  }
+
+  .app-top-background {
+    height: 0.8 * $app-top-background-empty-height;
+  }
+
+  .app-top-navigation__content {
+    flex-direction: column;
+    width: 100%;
+    font-size: 0.8rem;
+
+    > :first-child {
+      margin-right: 0;
+    }
+  }
+
+  .app-top-navigation__menu {
+    margin: 0.625rem 0;
+
+    a {
+      padding: 0.3125rem 0.625rem;
+    }
+  }
+
+  .app-top-navigation__social {
+    width: 100%;
+    justify-content: center;
+    background: rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    a {
+      line-height: 1.4em;
+    }
+
+    a > span {
+      display: inline-block;
+    }
+  }
+}
+
+// Move text in header down
+// and change size of "Hey, I am"... module
+
+@media (max-width: 730px) {
+  .app-header__name {
+    display: block;
+  }
+
+  .app-header__text {
+    line-height: 1.5em;
+    font-size: 1.8em;
+  }
+}
+
+// Move highlights list to separated lines
+
+@media (max-width: 820px) {
+  .highlights-list > ul {
+    flex-wrap: wrap;
+
+    > li {
+      min-width: 12.5rem;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .highlights-list > ul > li {
+    font-size: 0.85em;
+    min-width: 8.75rem;
+  }
+}
+
+// Change technologies grid to smaller size
+
+@media (max-width: 605px) {
+  .technologies-grid {
+    @include technologies-grid-entry-size(4rem);
+    @include technologies-grid-image-height(2rem);
+    @include technologies-grid-label-styling($font-size: 0.625rem);
+  }
+}
+
+// Change footer styling to fill space
+
+@media (max-width: 590px) {
+  .app-footer {
+    &__content {
+      text-align: center;
+      flex-direction: column;
+    }
+
+    &__company {
+      margin-left: 0;
+      white-space: normal;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .app-footer__company {
+    font-size: 0.9em;
+  }
+}
+
+// Change "Talks" to vertical cards
+
+@media (max-width: 580px) {
+  #talks-list {
+    > ul > li > .project-card {
+      @include project-card-vertical($base-class-name: 'project-card');
+    }
+  }
+}
+
+// Change text margins to smaller
+
+@media (max-width: 670px) {
+  .app-section > p {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .columns {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .app-section > p {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+
+  .columns {
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+  }
+}

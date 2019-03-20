@@ -1,0 +1,15 @@
+@import '../../config';
+
+$photo-rotation: -2deg !default;
+
+$photo-first-border-color: $color-background-light !default;
+$photo-first-border-width: 4px !default;
+
+$photo-second-border-color: transparentize($color-background-opposite, 0.9) !default;
+$photo-second-border-width: 2px !default;
+
+$photo-third-border-color: $photo-first-border-color !default;
+$photo-third-border-width: 1px !default;
+
+$photo-box-shadow-blur-size: 10px !default;
+$photo-box-shadow-color: transparentize($color-background-opposite, 0.95) !default;

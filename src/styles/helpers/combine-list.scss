@@ -1,0 +1,13 @@
+@function combine-list ($list) {
+  $combined-list: '';
+
+  @each $element in $list {
+    @if $combined-list == '' {
+      $combined-list: $element;
+    } @else {
+      $combined-list: '#{$combined-list}, #{$element}';
+    }
+  }
+
+  @return $combined-list;
+}

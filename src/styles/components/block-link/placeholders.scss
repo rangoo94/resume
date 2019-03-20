@@ -1,0 +1,7 @@
+@import './mixins';
+
+// Base placeholder
+
+%block-link {
+  @include block-link;
+}

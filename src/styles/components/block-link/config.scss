@@ -1,0 +1,14 @@
+@import '../../config';
+
+$block-link-border-radius: 3px !default;
+$block-link-horizontal-margin: 0.2em !default;
+$block-link-padding-horizontal: 0.625rem !default;
+$block-link-padding-vertical: 0 !default;
+
+$block-link-background-color: $color-background-opposite !default;
+$block-link-text-color: if($color-background-opposite == black, #fff, #000) !default;
+
+$block-link-hover-background-color: $color-primary !default;
+$block-link-hover-text-color: $block-link-text-color !default;
+
+$block-link-icon-margin: 3px !default;

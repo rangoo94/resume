@@ -1,0 +1,62 @@
+@import './config';
+
+// Mixins
+
+@mixin photo-base () {
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+@mixin photo-rotate ($rotation: $photo-rotation) {
+  transform: rotate($rotation);
+}
+
+@mixin photo-size ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin photo-frame (
+  $first-border-color: $photo-first-border-color,
+  $first-border-width: $photo-first-border-width,
+  $second-border-color: $photo-second-border-color,
+  $second-border-width: $photo-second-border-width,
+  $third-border-color: $photo-third-border-color,
+  $third-border-width: $photo-third-border-width,
+  $box-shadow-blur-size: $photo-box-shadow-blur-size,
+  $box-shadow-color: $photo-box-shadow-color
+) {
+  background: $first-border-color;
+  padding: $first-border-width;
+  border: $second-border-width solid $second-border-color;
+  box-shadow:
+    $third-border-width 0 0 0 $third-border-color,
+    0 0 $box-shadow-blur-size $box-shadow-color;
+}
+
+// Complex mixin
+
+@mixin photo (
+  $rotation: $photo-rotation,
+  $frame-first-border-color: $photo-first-border-color,
+  $frame-first-border-width: $photo-first-border-width,
+  $frame-second-border-color: $photo-second-border-color,
+  $frame-second-border-width: $photo-second-border-width,
+  $frame-third-border-color: $photo-third-border-color,
+  $frame-third-border-width: $photo-third-border-width,
+  $frame-box-shadow-blur-size: $photo-box-shadow-blur-size,
+  $frame-box-shadow-color: $photo-box-shadow-color
+) {
+  @include photo-base;
+  @include photo-rotate($rotation: $rotation);
+  @include photo-frame(
+    $first-border-color: $frame-first-border-color,
+    $first-border-width: $frame-first-border-width,
+    $second-border-color: $frame-second-border-color,
+    $second-border-width: $frame-second-border-width,
+    $third-border-color: $frame-third-border-color,
+    $third-border-width: $frame-third-border-width,
+    $box-shadow-blur-size: $frame-box-shadow-blur-size,
+    $box-shadow-color: $frame-box-shadow-color
+  );
+}

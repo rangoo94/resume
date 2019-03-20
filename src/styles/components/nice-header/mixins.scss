@@ -1,0 +1,75 @@
+@import './config';
+
+// Mixins
+
+@mixin nice-header-base () {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 30%;
+    transform: translateX(50%) skewX(30deg);
+    width: 0;
+    height: 0;
+    border-width: 0.8em 0.16em 0 0.64em;
+    border-style: solid;
+    border-color: transparent;
+    margin-top: -0.6px; // Make sure that it will look smoothly
+  }
+}
+
+@mixin nice-header-format (
+  $font-weight: $nice-header-font-weight
+) {
+  font-weight: $nice-header-font-weight
+}
+
+@mixin nice-header-rotation ($rotation: $nice-header-rotation) {
+  transform: rotate($rotation);
+}
+
+@mixin nice-header-spacing (
+  $vertical: $nice-header-spacing-vertical,
+  $horizontal: $nice-header-spacing-horizontal
+) {
+  padding: $vertical $horizontal;
+}
+
+@mixin nice-header-colors (
+  $text-color: $nice-header-text-color,
+  $background-color: $nice-header-background-color
+) {
+  background: $background-color;
+  color: $text-color;
+
+  &::before {
+    border-top-color: $background-color;
+  }
+}
+
+// Complex mixin
+
+@mixin nice-header (
+  $text-color: $nice-header-text-color,
+  $background-color: $nice-header-background-color,
+  $horizontal-spacing: $nice-header-spacing-horizontal,
+  $vertical-spacing: $nice-header-spacing-vertical,
+  $font-weight: $nice-header-font-weight,
+  $rotation: $nice-header-rotation
+) {
+  @include nice-header-base;
+  @include nice-header-rotation($rotation: $rotation);
+  @include nice-header-format($font-weight: $font-weight);
+  @include nice-header-spacing(
+    $horizontal: $horizontal-spacing,
+    $vertical: $vertical-spacing
+  );
+  @include nice-header-colors(
+    $text-color: $text-color,
+    $background-color: $background-color
+  );
+}

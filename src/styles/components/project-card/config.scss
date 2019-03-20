@@ -1,0 +1,29 @@
+@import '../../config';
+
+$project-card-base-class-name: 'project-card' !default;
+
+$project-card-border-width: 2px !default;
+$project-card-border-color: #eee !default;
+
+$project-card-image-box-background-color: $color-background-light !default;
+$project-card-description-box-background-color: #fafafa !default;
+
+$project-card-spacing: 1.25rem !default;
+$project-card-vertical-spacing: 1.25 * $project-card-spacing !default;
+$project-card-half-spacing: 0.5 * $project-card-spacing !default;
+
+$project-card-image-box-width: 12.5rem !default;
+$project-card-image-max-width: 70% !default;
+$project-card-image-small-max-width: 40% !default;
+
+$project-card-image-with-background-border-radius: 3px !default;
+$project-card-image-with-background-spacing: $project-card-half-spacing !default;
+$project-card-image-with-background-color: #000 !default;
+
+$project-card-header-text-color: inherit !default;
+$project-card-date-text-color: mix($color-text, $color-background-light, 60%) !default;
+$project-card-text-color: inherit !default;
+
+$project-card-vertical-image-box-height: 7.5rem !default;
+$project-card-vertical-image-max-width: $project-card-image-box-width !default;
+$project-card-vertical-image-max-height: $project-card-vertical-image-box-height * 7/12 !default;

@@ -1,0 +1,7 @@
+@import './mixins';
+
+// Base placeholder
+
+%initials {
+  @include initials;
+}

@@ -1,0 +1,41 @@
+// Use basic selectors for components
+
+dl                  { @extend %contacts-list; }
+.block-link         { @extend %block-link; }
+.initials           { @extend %initials; }
+.app-section-header { @extend %nice-header; }
+.links-list         { @extend %links-list; }
+.highlights-list    { @extend %highlights-list; }
+//.technologies-grid  { @extend %technologies-grid; }
+.technologies-grid  { @include technologies-grid; }
+.project-card       { @extend %project-card; }
+.projects-list      { @extend %projects-list; }
+
+// Set-up additional behavior for selected elements
+
+#os-projects-list {
+  @extend %projects-list--2;
+}
+
+#experience-list {
+  @extend %projects-list--counting;
+  @extend %projects-list--3;
+  @extend %projects-list--vertical-card;
+}
+
+// Set-up more customized inclusions
+
+.colorful-mode {
+  @include expanding-button($base-class-name: 'colorful-mode');
+  position: fixed;
+  // TODO: use variables
+  bottom: 20px;
+  left: 20px;
+
+  &--running {
+    @include expanding-button-expected-width(
+      $base-class-name: 'colorful-mode',
+      $expected-width: 75px
+    );
+  }
+}

@@ -1,0 +1,87 @@
+@import './config';
+
+// Set up defaults
+
+html {
+  font-size: 16px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+// Set up basic stuff
+
+body {
+  font: 1rem/1.666666 $font-family-regular;
+  background: $color-background url(../../assets/images/bg.svg) 50% 0 repeat-y;
+  background-size: 1400px auto; // TODO: use variable
+  color: $color-text;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: $blockquote-padding-vertical $blockquote-padding-horizontal;
+  background: $blockquote-background-color;
+  color: $blockquote-text-color;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+abbr[title] {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+
+  &:hover, &:focus {
+    &::before {
+      content: attr(title);
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      transform: translate(-50%, -1 * $tooltip-arrow-height);
+      background: $tooltip-background-color;
+      white-space: nowrap;
+      color: $tooltip-text-color;
+      opacity: $tooltip-opacity;
+      font-size: $tooltip-font-size;
+      padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
+      border-radius: $tooltip-border-radius;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      opacity: $tooltip-opacity;
+      border-style: solid;
+      border-width: $tooltip-arrow-height #{$tooltip-arrow-width / 2} 0 #{$tooltip-arrow-width / 2};
+      border-color: $tooltip-background-color transparent transparent transparent;
+    }
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}

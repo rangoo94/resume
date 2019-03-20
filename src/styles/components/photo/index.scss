@@ -1,0 +1,9 @@
+@import './config';
+@import './mixins';
+@import './placeholders';
+
+// Use common class for common settings
+
+.photo {
+  @extend %photo;
+}

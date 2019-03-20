@@ -1,0 +1,101 @@
+@import './config';
+
+// Mixins
+
+@mixin projects-list-base ($project-card-class-name: $projects-list-card-class-name) {
+  > ul {
+    @extend %semantic-list;
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      box-sizing: border-box;
+      display: flex;
+      flex: 1 0;
+
+      > #{unquote('.#{$project-card-class-name}')} {
+        flex: 1;
+      }
+    }
+  }
+}
+
+@mixin projects-list-element-style () {
+  > ul > li {
+    @content;
+  }
+}
+
+@mixin projects-list-card-spacing ($spacing: $projects-list-card-spacing) {
+  > ul {
+    margin: -0.5 * $spacing;
+
+    > li {
+      padding: 0.5 * $spacing;
+    }
+  }
+}
+
+@mixin projects-list-elements-per-line ($elements: 1) {
+  > ul > li {
+    width: 100% / $elements;
+    flex-basis: 100% / $elements;
+  }
+}
+
+@mixin projects-list-minimum-card-width ($width: $projects-list-card-minimum-width) {
+  > ul > li {
+    min-width: $width;
+  }
+}
+
+@mixin projects-list-counter (
+  $project-card-class-name: $projects-list-card-class-name,
+  $counter-size: $projects-list-counter-size,
+  $font-size: $projects-list-counter-font-size,
+  $text-color: $projects-list-counter-text-color,
+  $background-color: $projects-list-counter-background-color
+) {
+  > ul {
+    counter-reset: project;
+
+    > li {
+      counter-increment: project;
+
+      #{unquote('.#{$project-card-class-name}__image:first-child')},
+      #{unquote('.#{$project-card-class-name}__content:first-child')} {
+        &::before {
+          content: counter(project);
+          box-sizing: border-box;
+          background: $background-color;
+          width: $counter-size;
+          height: $counter-size;
+          padding-right: $counter-size / 6;
+          line-height: $counter-size * 5/6;
+          font-size: $font-size;
+          font-weight: 500;
+          text-align: center;
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: $text-color;
+          border-radius: 0 0 #{$counter-size / 2} 0;
+        }
+      }
+    }
+  }
+}
+
+// Complex mixin
+
+@mixin projects-list (
+  $project-card-class-name: $projects-list-card-class-name,
+  $card-spacing: $projects-list-card-spacing,
+  $minimum-card-width: $projects-list-card-minimum-width,
+  $elements-per-line: 1
+) {
+  @include projects-list-base($project-card-class-name: $projects-list-card-class-name);
+  @include projects-list-card-spacing($spacing: $card-spacing);
+  @include projects-list-minimum-card-width($width: $minimum-card-width);
+  @include projects-list-elements-per-line($elements: $elements-per-line);
+}

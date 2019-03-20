@@ -1,0 +1,106 @@
+@import '../config';
+
+// Set-up configuration
+
+$existing-colorful-animations: ();
+
+// Set-up helper functions
+
+@function color-hash ($base-color) {
+  @return '#{red($base-color)}-#{green($base-color)}-#{blue($base-color)}-#{ceil(alpha($base-color) * 100000)}';
+}
+
+@function get-colorful-animation-name ($base-color, $property) {
+  @return unquote('colorful-#{color-hash($base-color)}-#{$property}');
+}
+
+@function get-colorful-animation ($base-color, $property, $time: 30s) {
+  @return $time get-colorful-animation-name($base-color, $property) infinite;
+}
+
+@mixin create-colorful-animation ($base-color, $property, $step: 25) {
+  $hash: get-colorful-animation-name($base-color, $property);
+
+  @if index($existing-colorful-animations, $hash) == null {
+    $existing-colorful-animations: append($existing-colorful-animations, $hash) !global;
+
+    @keyframes #{$hash} {
+      @for $percentage from 0 through 100 {
+        @if $percentage % $step {
+          #{$percentage * 1%} {
+            #{$property}: adjust-hue($base-color, 360deg * $percentage / 100);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Set-up mixin to attach colorful animation
+
+@mixin use-colorful-animation (
+  $selector,
+  $style: (),
+  $will-change: '',
+  $separate-layer: false,
+  $theme-selector: '.theme-colorful',
+  $theme-paused-selector: '.theme-colorful--pause',
+  $not-in: ()
+) {
+  $animations: '';
+
+  @if $separate-layer {
+    @if $will-change == '' {
+      $will-change: 'transform';
+    } @else {
+      $will-change: 'transform, #{$will-change}';
+    }
+  }
+
+  @each $property, $color in $style {
+    @include create-colorful-animation($color, $property);
+    $animation-name: get-colorful-animation($color, $property);
+
+    @if $animations == '' {
+      $animations: '#{get-colorful-animation($color, $property)}';
+    } @else {
+      $animations: '#{$animations}, #{$animation-name}';
+    }
+
+    @if $will-change == '' {
+      $will-change: '#{$property}';
+    } @else if not str-index($will-change, $property) {
+      $will-change: '#{$property}, #{$will-change}';
+    }
+  }
+
+  @include colorful-only-style($theme-selector: $theme-selector) {
+    #{unquote($selector)} {
+      @content;
+    }
+  }
+
+  @if str-length($animations) > 0 {
+    @include colorful-only-style($theme-selector: $theme-selector) {
+      #{unquote($selector)} {
+        animation: #{unquote($animations)};
+      }
+
+      @each $parent-selector in $not-in {
+        #{unquote($parent-selector)} #{unquote($selector)} {
+          animation: none;
+        }
+      }
+    }
+
+    #{unquote($selector)} {
+      will-change: #{unquote($will-change)};
+    }
+
+    #{$theme-paused-selector} {
+      #{unquote($selector)} {
+        animation-play-state: paused;
+      }
+    }
+  }
+}

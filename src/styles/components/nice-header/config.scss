@@ -1,0 +1,10 @@
+@import '../../config';
+
+$nice-header-rotation: -4deg !default;
+
+$nice-header-spacing-vertical: 0.625rem !default;
+$nice-header-spacing-horizontal: 1.5625rem !default;
+
+$nice-header-font-weight: 400 !default;
+$nice-header-text-color: #fff !default;
+$nice-header-background-color: mix(#000, $color-primary, 50%) !default;

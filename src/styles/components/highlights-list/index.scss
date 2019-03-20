@@ -1,0 +1,9 @@
+@import './config';
+@import './placeholders';
+@import './mixins';
+
+// Use common class for common settings
+
+.highlights-list {
+  @extend %highlights-list;
+}

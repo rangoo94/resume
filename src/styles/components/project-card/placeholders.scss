@@ -1,0 +1,7 @@
+@import './mixins';
+
+// Base placeholder
+
+%project-card {
+  @include project-card($base-class-name: $project-card-base-class-name);
+}

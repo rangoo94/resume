@@ -1,0 +1,36 @@
+// Colors
+
+$color-primary: #ef3e3e;
+$color-primary: #217ad0;
+//$color-primary: #55ad17;
+//$color-primary: #ad1374;
+//$color-primary: #00aadb;
+
+$color-background: #fafafa;
+$color-background-light: #fff;
+$color-background-opposite: #000;
+
+$color-text: #32333c;
+$color-text-opposite: #fff;
+$color-link: $color-primary;
+
+// Font families
+
+$font-family-regular: Poppins, Arial, Tahoma, sans-serif;
+$font-family-header: Montserrat, Arial, Tahoma, sans-serif;
+
+// Weights
+
+$font-weight-regular: 400;
+
+// Tooltip
+
+$tooltip-background-color: $color-background-opposite;
+$tooltip-text-color: transparentize($color-text-opposite, 0.2);
+$tooltip-opacity: .8;
+$tooltip-font-size: 0.7rem;
+$tooltip-border-radius: 3px;
+$tooltip-padding-horizontal: 0.625rem;
+$tooltip-padding-vertical: 0.4375rem;
+$tooltip-arrow-width: 14px;
+$tooltip-arrow-height: 10px;
