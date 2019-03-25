@@ -34,6 +34,10 @@ const imageLoaders = isProduction ? [ 'file-loader', optimizeImagesLoader ] : [ 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
 
+  output: {
+    filename: '[name].[hash].js'
+  },
+
   module: {
     rules: [
       {
@@ -75,7 +79,7 @@ module.exports = {
         quoteCharacter: '"'
       }
     }),
-    new MiniCssExtractPlugin({ fileName: '[name]' })
+    new MiniCssExtractPlugin({ filename: '[name].[hash].css' })
   ],
 
   devServer: {
