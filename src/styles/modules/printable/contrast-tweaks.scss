@@ -1,0 +1,10 @@
+// Project card
+
+html.printable-resume {
+  .project-card {
+    @include project-card-border(
+      $base-class-name: 'project-card',
+      $color: #ddd
+    );
+  }
+}

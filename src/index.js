@@ -12,3 +12,6 @@ import './modules/smooth-scrolling'
 
 // Add colorful mode button
 import './modules/colorful-mode'
+
+// Expose function to mask vulnerable data in resume
+import './modules/masking'

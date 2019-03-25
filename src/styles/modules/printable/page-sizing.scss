@@ -1,0 +1,129 @@
+@import './config';
+
+// Validation & calibration
+
+$print-margin-left-real: $print-margin-left - $print-margin-left-virtual;
+$print-margin-top-real: $print-margin-top - $print-margin-top-virtual;
+$print-margin-right-real: $print-margin-right - $print-margin-right-virtual;
+$print-margin-bottom-real: $print-margin-bottom - $print-margin-bottom-virtual;
+
+@if ($print-margin-left-virtual > $print-margin-left) {
+  @error 'Virtual margin can\'t be bigger than full one';
+}
+
+@if ($print-margin-right-virtual > $print-margin-right) {
+  @error 'Virtual margin can\'t be bigger than full one';
+}
+
+@if ($print-margin-top-virtual > $print-margin-top) {
+  @error 'Virtual margin can\'t be bigger than full one';
+}
+
+@if ($print-margin-bottom-virtual > $print-margin-bottom) {
+  @error 'Virtual margin can\'t be bigger than full one';
+}
+
+// Setting up basic sizes & styling
+
+html.printable-resume {
+  font-size: 2.5mm;
+
+  %container {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: initial;
+    width: initial;
+  }
+
+  .app {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .app-content {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+// Setting up basic page size
+
+@page {
+  size: $print-width $print-height;
+  margin: $print-margin-top-real $print-margin-right-real $print-margin-bottom-real $print-margin-left-real;
+}
+
+// Setting up "print" styling
+
+@media only print {
+  html.printable-resume {
+    &, body, .app {
+      width: auto;
+      padding: 0;
+      margin: 0;
+      min-height: initial;
+    }
+
+    body {
+      background: #fff;
+    }
+
+    .app {
+      padding: $print-margin-top-virtual $print-margin-right-virtual $print-margin-bottom-virtual $print-margin-left-virtual;
+    }
+  }
+}
+
+// Setting up "screen" development simulation
+
+@media only screen {
+  html.printable-resume {
+    body {
+      background: #eee;
+    }
+
+    .app {
+      background: #fff;
+    }
+  }
+}
+
+// Setting up "screen" sizing simulation
+
+@media only screen {
+  html.printable-resume .app {
+    width: $print-width;
+    min-height: $print-height;
+    padding: $print-margin-top $print-margin-right $print-margin-bottom $print-margin-left;
+    margin: 0 auto;
+  }
+}
+
+// Setting up pointers for "screen" simulation
+
+@media only screen {
+  html.printable-resume .app {
+    &::before, &::after {
+      box-sizing: border-box;
+      content: 'approx. PAGE END';
+      position: absolute;
+      z-index: 10;
+      top: $print-height;
+      right: 100%;
+      margin-top: -1px;
+      padding-right: 20px;
+      text-align: right;
+      white-space: nowrap;
+      height: 0;
+      width: 400px;
+      border-bottom: 2px solid #ddd;
+      color: #ccc;
+    }
+
+    &::after {
+      content: 'approx. CONTENT END';
+      top: $print-height - $print-margin-bottom;
+    }
+  }
+}

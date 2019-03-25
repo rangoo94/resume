@@ -3,7 +3,7 @@
 // Remove stripes on smaller screen,
 // where it will not be visible anyway.
 
-@media (max-width: 1350px) {
+@media screen and (max-width: 1350px) {
   body {
     background-image: none;
   }
@@ -21,7 +21,7 @@
 
 $full-container-width: $container-max-width * 100% / $container-max-width-percentage;
 
-@media (max-width: $full-container-width) {
+@media screen and (max-width: $full-container-width) {
   %container {
     max-width: initial;
     width: auto;
@@ -50,7 +50,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 // Remove my photo from header,
 // as it's messing with text content.
 
-@media (max-width: 1040px) {
+@media screen and (max-width: 1040px) {
   .app-header__photo {
     display: none;
   }
@@ -58,7 +58,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 
 // Remove colorful mode on smaller devices
 
-@media (max-width: 870px) {
+@media screen and (max-width: 870px) {
   .colorful-mode {
     display: none;
   }
@@ -66,7 +66,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 
 // Change overall size of website
 
-@media (max-width: 865px) {
+@media screen and (max-width: 865px) {
   html {
     font-size: 14px;
   }
@@ -74,7 +74,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 
 // Move links from header to two lines
 
-@media (max-width: 860px) {
+@media screen and (max-width: 860px) {
   .app-top-navigation {
     min-height: initial;
   }
@@ -125,7 +125,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 // Move text in header down
 // and change size of "Hey, I am"... module
 
-@media (max-width: 730px) {
+@media screen and (max-width: 730px) {
   .app-header__name {
     display: block;
   }
@@ -138,7 +138,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 
 // Move highlights list to separated lines
 
-@media (max-width: 820px) {
+@media screen and (max-width: 820px) {
   .highlights-list > ul {
     flex-wrap: wrap;
 
@@ -148,7 +148,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
   }
 }
 
-@media (max-width: 470px) {
+@media screen and (max-width: 470px) {
   .highlights-list > ul > li {
     font-size: 0.85em;
     min-width: 8.75rem;
@@ -157,7 +157,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 
 // Change technologies grid to smaller size
 
-@media (max-width: 605px) {
+@media screen and (max-width: 605px) {
   .technologies-grid {
     @include technologies-grid-entry-size(4rem);
     @include technologies-grid-image-height(2rem);
@@ -167,7 +167,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 
 // Change footer styling to fill space
 
-@media (max-width: 590px) {
+@media screen and (max-width: 590px) {
   .app-footer {
     &__content {
       text-align: center;
@@ -181,7 +181,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
   }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
   .app-footer__company {
     font-size: 0.9em;
   }
@@ -189,7 +189,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 
 // Change "Talks" to vertical cards
 
-@media (max-width: 580px) {
+@media screen and (max-width: 580px) {
   #talks-list {
     > ul > li > .project-card {
       @include project-card-vertical($base-class-name: 'project-card');
@@ -199,7 +199,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
 
 // Change text margins to smaller
 
-@media (max-width: 670px) {
+@media screen and (max-width: 670px) {
   .app-section > p {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -211,7 +211,7 @@ $full-container-width: $container-max-width * 100% / $container-max-width-percen
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .app-section > p {
     padding-left: 0.625rem;
     padding-right: 0.625rem;

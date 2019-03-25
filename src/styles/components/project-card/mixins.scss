@@ -17,6 +17,8 @@
 @mixin project-card-base ($base-class-name) {
   @include project-card-tweaks($base-class-name: $base-class-name);
   display: flex;
+  position: relative;
+  page-break-inside: avoid;
 
   #{unquote('.#{$base-class-name}__image')} {
     position: relative;

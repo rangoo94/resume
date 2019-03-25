@@ -48,8 +48,10 @@ function refreshNavigation () {
   }
 }
 
-// Update navigation initially
-refreshNavigation()
+if (topNavigationElement) {
+  // Update navigation initially
+  refreshNavigation()
 
-// Update navigation on scroll
-window.addEventListener('scroll', refreshNavigation)
+  // Update navigation on scroll
+  window.addEventListener('scroll', refreshNavigation)
+}

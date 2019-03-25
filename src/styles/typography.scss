@@ -85,3 +85,22 @@ abbr[title] {
 .nowrap {
   white-space: nowrap;
 }
+
+// Style selection
+
+::selection {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+
+// Use correct colors for printing
+
+:root {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}

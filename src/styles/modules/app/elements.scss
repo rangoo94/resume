@@ -23,6 +23,11 @@ dl                  { @extend %contacts-list; }
   @extend %projects-list--vertical-card;
 }
 
+#resume-experience-list {
+  @extend %projects-list--vertical-card;
+  @extend %projects-list--2;
+}
+
 // Set-up more customized inclusions
 
 .colorful-mode {

@@ -64,6 +64,17 @@ module.exports = {
         quoteCharacter: '"'
       }
     }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src/resume.ejs'),
+      filename: 'resume.html',
+      minify: {
+        collapseBooleanAttributes: true,
+        conservativeCollapse: true,
+        collapseWhitespace: true,
+        removeComments: true,
+        quoteCharacter: '"'
+      }
+    }),
     new MiniCssExtractPlugin({ fileName: '[name]' })
   ],
 

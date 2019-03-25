@@ -15,7 +15,8 @@
 
 // Set-up section margins
 
-.app-content > .app-section {
+.app-content > .app-section,
+.app-content > .highlights-list {
   margin: $app-content-section-margin 0;
 
   &:first-child {

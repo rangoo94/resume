@@ -1,0 +1,52 @@
+@import './mixins';
+
+// Change highlights list spacing, color and change it to vertical
+
+html.printable-resume {
+  .highlights-list {
+    @include highlights-list-spacing($spacing: 2mm);
+    @include highlights-list-border(
+      $width: $highlights-list-border-width,
+      $color: #ccc
+    );
+
+    > ul > li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > strong {
+        margin-right: 1mm;
+      }
+    }
+  }
+}
+
+// Change highlights list to spread horizontal lines over margins
+
+html.printable-resume {
+  .highlights-list {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: $highlights-list-border-width;
+      left: 0;
+      width: 100%;
+      box-shadow:
+        generate-spreading-box-shadow($color: #ccc, $step-x: -50px, $segments: 10),
+        generate-spreading-box-shadow($color: #ccc, $step-x: 50px, $segments: 10);
+    }
+
+    &::before {
+      bottom: 100%;
+    }
+
+    &::after {
+      top: 100%;
+    }
+  }
+}
