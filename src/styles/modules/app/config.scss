@@ -32,6 +32,10 @@ $app-top-navigation-menu-link-hover-text-color: $app-top-navigation-menu-link-te
 $app-top-navigation-menu-link-hover-line-size: 3px !default;
 $app-top-navigation-menu-link-hover-line-color: currentColor !default;
 
+$app-top-navigation-special-link-background-color: #fff !default;
+$app-top-navigation-special-link-text-color: $color-primary !default;
+$app-top-navigation-special-link-border-radius: 25px !default;
+
 // Application top background
 
 $app-top-background-empty-height: $app-top-navigation-height !default;

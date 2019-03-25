@@ -28,5 +28,5 @@ TODO
 * [ ] Set up printable version
 * [ ] Extract data to JSON files
 * [ ] Set up JSON-LD / microdata
-* [ ] Optimize bundle size
+* [ ] Optimize bundle size (mostly FontAwesome)
 * [ ] Prepare better text content

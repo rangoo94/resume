@@ -8,19 +8,22 @@
 
 @include separate-layers(
   // Toggle button for colorful mode
-    '.colorful-mode',
+  '.colorful-mode',
 
-    // Header sections
-    '.app-header__text', '.app-header__photo',
+  // "Resume" button
+  '.app-top-navigation__link--special a',
 
-    // SVG lines in background
-    '.app-top-background::after', '.app-top-navigation::after',
+  // Header sections
+  '.app-header__text', '.app-header__photo',
 
-    // Navigation content
-    '.app-top-navigation__content',
+  // SVG lines in background
+  '.app-top-background::after', '.app-top-navigation::after',
 
-    // Website content
-    '.app-content'
+  // Navigation content
+  '.app-top-navigation__content',
+
+  // Website content
+  '.app-content'
 );
 
 // Remove box-shadow of application content,
@@ -34,7 +37,7 @@
 // Separate layers for better performance
 
 @include colorful(
-    '.app-top-background, .app-top-background-side-1, .app-top-background-side-2',
+  '.app-top-background, .app-top-background-side-1, .app-top-background-side-2',
   $style: ( background-color: $color-primary ),
   $separate-layer: true
 );
@@ -49,29 +52,36 @@
   $separate-layer: true
 );
 
+// Format "Resume" navigation link
+@include colorful(
+  '.app-top-navigation__menu .app-top-navigation__link--special a, .app-top-navigation__menu .app-top-navigation__link--special a:hover',
+  $style: ( color: $color-primary ),
+  $separate-layer: true
+);
+
 // Format position / specialization
 
 @include colorful(
-    '.app-header__name em',
+  '.app-header__name em',
   $style: ( color: $color-primary )
 );
 
 // Format section headers
 
 @include colorful(
-    '.app-section-header',
+  '.app-section-header',
   $style: ( background-color: $nice-header-background-color )
 );
 
 @include colorful(
-    '.app-section-header:before',
+  '.app-section-header:before',
   $style: ( border-top-color: $nice-header-background-color )
 );
 
 // Format block quotes
 
 @include colorful(
-    'blockquote',
+  'blockquote',
   $style: (
     background-color: $blockquote-background-color,
     color: $blockquote-text-color
@@ -81,7 +91,7 @@
 // Format block links
 
 @include colorful(
-    '.block-link',
+  '.block-link',
   $style: ( background-color: $color-primary )
 ) {
   &:hover {
@@ -92,7 +102,7 @@
 // Format all links
 
 @include colorful(
-    'a',
+  'a',
   $style: ( color: $color-link ),
   $not-in: ( '.app-top-navigation__menu', '.app-top-navigation__social' )
 );

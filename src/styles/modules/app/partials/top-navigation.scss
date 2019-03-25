@@ -105,6 +105,26 @@
   }
 }
 
+// Create better style for special link
+
+.app-top-navigation__link--special {
+  a {
+    background: $app-top-navigation-special-link-background-color;
+    color: $app-top-navigation-special-link-text-color;
+    font-weight: 500;
+    border-radius: $app-top-navigation-special-link-border-radius;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      color: $app-top-navigation-special-link-text-color;
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, .3);
+    }
+  }
+}
+
 // App top navigation: stripes
 
 .app-top-navigation::after {
