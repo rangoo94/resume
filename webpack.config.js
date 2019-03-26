@@ -3,6 +3,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const WebpackPwaManifest = require('webpack-pwa-manifest')
+const workboxPlugin = require('workbox-webpack-plugin')
 
 // Configure
 
@@ -35,7 +37,7 @@ module.exports = {
   mode: isProduction ? 'production' : 'development',
 
   output: {
-    filename: '[name].[hash].js'
+    filename: '[name].[contenthash].js'
   },
 
   module: {
@@ -79,7 +81,74 @@ module.exports = {
         quoteCharacter: '"'
       }
     }),
-    new MiniCssExtractPlugin({ filename: '[name].[hash].css' })
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css'
+    }),
+    new workboxPlugin.GenerateSW({
+      swDest: 'sw.js',
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [
+        // Google Fonts
+        {
+          urlPattern: /^https:\/\/fonts\.googleapis\.com/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'google-fonts-stylesheets'
+          }
+        },
+        {
+          urlPattern: /^https:\/\/fonts\.gstatic\.com/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'google-fonts-webfonts',
+            cacheableResponse: {
+              statuses: [ 0, 200 ]
+            },
+            expiration: {
+              maxEntries: 30,
+              maxAgeSeconds: 60 * 60 * 24 * 365
+            }
+          }
+        },
+
+        // FontAwesome icons
+        {
+          urlPattern: /^https:\/\/use\.fontawesome\.com\/releases\/.*\.css$/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'fontawesome-stylesheets'
+          }
+        },
+        {
+          urlPattern: /^https:\/\/use\.fontawesome\.com\/releases\/.*\.(woff2|ttf|woff|eot|svg)/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'fontawesome-webfonts',
+            cacheableResponse: {
+              statuses: [ 0, 200 ]
+            },
+            expiration: {
+              maxEntries: 30,
+              maxAgeSeconds: 60 * 60 * 24 * 365
+            }
+          }
+        }
+      ]
+    }),
+    new WebpackPwaManifest({
+      name: 'Dawid Rusnak Resume',
+      short_name: 'DRCodeResume',
+      description: 'Full-Stack Web Developer and Software Architect, who specializes in React on front-end and Node.js in back-end.',
+      background_color: '#fff',
+      theme_color: '#217ad0',
+      icons: [
+        {
+          src: path.resolve('assets/images/icon.png'),
+          sizes: [ 36, 48, 72, 96, 120, 144, 152, 167, 180, 192, 512, 1024 ]
+        }
+      ]
+    })
   ],
 
   devServer: {

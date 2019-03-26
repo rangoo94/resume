@@ -15,3 +15,6 @@ import './modules/colorful-mode'
 
 // Expose function to mask vulnerable data in resume
 import './modules/masking'
+
+// Register service worker
+import './modules/service-worker'
