@@ -1,4 +1,4 @@
-# Dawid Rusnak resume
+# Dawid Rusnak résumé
 
 ## Technologies
 

@@ -4,15 +4,21 @@
     <meta charset="utf-8">
     <title>Dawid Rusnak - Software Architect &amp; Web Application Specialist</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-
+    <meta name="description" content="Full-Stack Web Developer and Software Architect, who specializes in React on front-end and Node.js in back-end.">
+    <meta name="keywords" content="software architect, web architect, full-stack, developer, software, development, frontend, backend, nodejs">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700">
   </head>
   <body>
+    <!-- My "Person" definition -->
+    <script type="application/ld+json"><%= JSON.stringify(require('../data/person.json')) %></script>
+    <!--/ My "Person" definition -->
+
     <div class="app-top-background">
       <div class="app-top-background-side-1"></div>
       <div class="app-top-background-side-2"></div>
     </div>
+
     <!-- Website -->
     <div class="app">
       <!-- Top navigation -->
@@ -21,13 +27,13 @@
           <!-- Social networks -->
           <ul class="app-top-navigation__social">
             <li>
-              <a href="https://www.linkedin.com/in/dawidrusnak" target="_blank">
+              <a href="https://www.linkedin.com/in/dawidrusnak" rel="noopener" target="_blank">
                 <i class="fab fa-linkedin-in"></i> LinkedIn
                 <span>@dawidrusnak</span>
               </a>
             </li>
             <li>
-              <a href="https://github.com/rangoo94" target="_blank">
+              <a href="https://github.com/rangoo94" rel="noopener" target="_blank">
                 <i class="fab fa-github-alt"></i> GitHub
                 <span>@rangoo94</span>
               </a>
@@ -601,7 +607,7 @@
               <li>
                 <article class="project-card">
                   <div class="project-card__image">
-                    <a target="_blank" href="https://brainly.com/">
+                    <a target="_blank" rel="noopener" href="https://brainly.com/">
                       <img src="<%= require('../assets/organizations/brainly.svg') %>" alt="Brainly logo">
                     </a>
                   </div>
@@ -625,7 +631,7 @@
               <li>
                 <article class="project-card">
                   <div class="project-card__image project-card__image--opposite-background project-card__image--small">
-                    <a target="_blank" href="https://www.tribecoders.com/">
+                    <a target="_blank" rel="noopener" href="https://www.tribecoders.com/">
                       <img src="<%= require('../assets/organizations/tribecoders.png') %>" alt="TribeCoders logo">
                     </a>
                   </div>
@@ -672,7 +678,7 @@
               <li>
                 <article class="project-card">
                   <div class="project-card__image">
-                    <a target="_blank" href="https://codete.com/">
+                    <a target="_blank" rel="noopener" href="https://codete.com/">
                       <img src="<%= require('../assets/organizations/codete.png') %>" alt="Codete logo">
                     </a>
                   </div>
@@ -778,7 +784,7 @@
               <li>
                 <article class="project-card">
                   <div class="project-card__image">
-                    <a target="_blank" href="https://careercon.pl/">
+                    <a target="_blank" rel="noopener" href="https://careercon.pl/">
                       <img src="<%= require('../assets/organizations/kariera-it.png') %>" alt="CareerCon logo">
                     </a>
                   </div>
@@ -799,7 +805,7 @@
 
                       <ul class="links-list">
                         <li>
-                          <a href="http://bit.ly/metaprogramowaniejs" target="_blank">
+                          <a href="http://bit.ly/metaprogramowaniejs" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Slides
                           </a>
                         </li>
@@ -812,7 +818,7 @@
               <li>
                 <article class="project-card">
                   <div class="project-card__image">
-                    <a target="_blank" href="https://www.codeeurope.pl/">
+                    <a target="_blank" rel="noopener" href="https://www.codeeurope.pl/">
                       <img src="<%= require('../assets/organizations/code-europe.png') %>" alt="Code Europe logo">
                     </a>
                   </div>
@@ -834,12 +840,12 @@
 
                       <ul class="links-list">
                         <li>
-                          <a href="http://bit.ly/node-js-behind" target="_blank">
+                          <a href="http://bit.ly/node-js-behind" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Slides
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.youtube.com/watch?v=GgH1DDnzkdI" target="_blank">
+                          <a href="https://www.youtube.com/watch?v=GgH1DDnzkdI" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Recording
                           </a>
                         </li>
@@ -852,7 +858,7 @@
               <li>
                 <article class="project-card">
                   <div class="project-card__image project-card__image--small">
-                    <a target="_blank" href="https://sfi.pl/">
+                    <a target="_blank" rel="noopener" href="https://sfi.pl/">
                       <img src="<%= require('../assets/organizations/sfi.png') %>" alt="Code Europe logo">
                     </a>
                   </div>
@@ -872,12 +878,12 @@
 
                       <ul class="links-list">
                         <li>
-                          <a href="http://bit.ly/react-realtime" target="_blank">
+                          <a href="http://bit.ly/react-realtime" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Slides
                           </a>
                         </li>
                         <li>
-                          <a href="http://bit.ly/1UTPQOB" target="_blank">
+                          <a href="http://bit.ly/1UTPQOB" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Repository
                           </a>
                         </li>
@@ -900,8 +906,8 @@
             I've been working on many open source projects, some of them has reached public phase.
             I&nbsp;selected some of them, which - in my opinion - shows better my skills.
             You may also want to see my
-            <a class="block-link" href="https://github.com/rangoo94" target="_blank"><i class="fab fa-github-alt"></i> GitHub</a> or
-            <a class="block-link" href="https://www.npmjs.com/~rangoo" target="_blank"><i class="fab fa-npm"></i> NPM</a> account.
+            <a class="block-link" href="https://github.com/rangoo94" rel="noopener" target="_blank"><i class="fab fa-github-alt"></i> GitHub</a> or
+            <a class="block-link" href="https://www.npmjs.com/~rangoo" rel="noopener" target="_blank"><i class="fab fa-npm"></i> NPM</a> account.
           </p>
 
           <!-- Open source projects > Projects list -->
@@ -924,12 +930,12 @@
 
                       <ul class="links-list">
                         <li>
-                          <a href="https://github.com/PublicInMotionGmbH/sass-merge" target="_blank">
+                          <a href="https://github.com/PublicInMotionGmbH/sass-merge" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Repository
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.npmjs.com/package/@talixo/sass-merge" target="_blank">
+                          <a href="https://www.npmjs.com/package/@talixo/sass-merge" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> NPM registry
                           </a>
                         </li>
@@ -956,17 +962,17 @@
 
                       <ul class="links-list">
                         <li>
-                          <a href="https://github.com/PublicInMotionGmbH/ui-kit" target="_blank">
+                          <a href="https://github.com/PublicInMotionGmbH/ui-kit" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Repository
                           </a>
                         </li>
                         <li>
-                          <a href="https://publicinmotiongmbh.github.io/ui-kit/" target="_blank">
+                          <a href="https://publicinmotiongmbh.github.io/ui-kit/" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Storybook
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.npmjs.com/search?q=%40talixo%2F" target="_blank">
+                          <a href="https://www.npmjs.com/search?q=%40talixo%2F" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> NPM search
                           </a>
                         </li>
@@ -993,12 +999,12 @@
 
                       <ul class="links-list">
                         <li>
-                          <a href="https://github.com/rangoo94/object-regexp" target="_blank">
+                          <a href="https://github.com/rangoo94/object-regexp" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Repository
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.npmjs.com/package/object-regexp" target="_blank">
+                          <a href="https://www.npmjs.com/package/object-regexp" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> NPM registry
                           </a>
                         </li>
@@ -1025,12 +1031,12 @@
 
                       <ul class="links-list">
                         <li>
-                          <a href="https://github.com/rangoo94/universal-lexer" target="_blank">
+                          <a href="https://github.com/rangoo94/universal-lexer" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Repository
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.npmjs.com/package/universal-lexer" target="_blank">
+                          <a href="https://www.npmjs.com/package/universal-lexer" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> NPM registry
                           </a>
                         </li>
@@ -1057,12 +1063,12 @@
 
                       <ul class="links-list">
                         <li>
-                          <a href="https://github.com/rangoo94/easen-models" target="_blank">
+                          <a href="https://github.com/rangoo94/easen-models" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Repository
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.npmjs.com/package/easen-models" target="_blank">
+                          <a href="https://www.npmjs.com/package/easen-models" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> NPM registry
                           </a>
                         </li>
@@ -1084,16 +1090,16 @@
                     </div>
 
                     <div class="project-card__description">
-                      Provides simple DI container which uses <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank">Proxy</a> for safety, lazy loading and additional tooling.
+                      Provides simple DI container which uses <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy" rel="noopener" target="_blank">Proxy</a> for safety, lazy loading and additional tooling.
 
                       <ul class="links-list">
                         <li>
-                          <a href="https://github.com/rangoo94/easen-di" target="_blank">
+                          <a href="https://github.com/rangoo94/easen-di" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> Repository
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.npmjs.com/package/easen-di" target="_blank">
+                          <a href="https://www.npmjs.com/package/easen-di" rel="noopener" target="_blank">
                             <i class="fas fa-link"></i> NPM registry
                           </a>
                         </li>
@@ -1124,14 +1130,14 @@
               <dl>
                 <dt>LinkedIn</dt>
                 <dd>
-                  <a href="https://www.linkedin.com/in/dawidrusnak" target="_blank">
+                  <a href="https://www.linkedin.com/in/dawidrusnak" rel="noopener" target="_blank">
                     <i class="fab fa-linkedin-in"></i> dawidrusnak
                   </a>
                 </dd>
 
                 <dt>GitHub</dt>
                 <dd>
-                  <a href="https://github.com/rangoo94" target="_blank">
+                  <a href="https://github.com/rangoo94" rel="noopener" target="_blank">
                     <i class="fab fa-github-alt"></i> rangoo94
                   </a>
                 </dd>

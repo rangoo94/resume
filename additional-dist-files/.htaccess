@@ -1,0 +1,7 @@
+# Redirect from /pl legacy URL
+Redirect 301 /pl /
+
+# Disallow page without www.
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^drcode.pl [NC]
+RewriteRule ^(.*)$ https://www.drcode.pl/$1 [L,R=301,NC]
