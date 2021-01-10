@@ -259,7 +259,7 @@ export class TypingText {
   _showCaret () {
     if (this.hasCaret && !this.isCaretVisible) {
       // Show caret line
-      this.element.style.boxShadow = '0.08em 0 0 0 currentColor'
+      this.element.style.boxShadow = '0.08em 0 0 -0.02em currentColor'
 
       // Mark caret as visible
       this.isCaretVisible = true
