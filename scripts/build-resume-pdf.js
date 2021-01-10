@@ -51,7 +51,7 @@ async function main () {
   await page.pdf({ path: OUTPUT_MASKED_RESUME_FILE_PATH, preferCSSPageSize: true })
 
   // Close browser session
-  browser.close()
+  await browser.close()
 
   // Retrieve PDF data
   const resumeData = await getPdfData(OUTPUT_RESUME_FILE_PATH)
