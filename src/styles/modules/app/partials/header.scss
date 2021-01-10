@@ -14,11 +14,15 @@
 // Application header: my photo
 
 .app-header__photo {
-  @include photo-base;
-  @include photo-frame;
-  @include photo-rotate($rotation: $app-header-photo-rotation);
-  @include photo-size($width: $app-header-photo-width, $height: $app-header-photo-height);
   position: absolute;
+
+  img {
+    @include photo-rotate($rotation: $app-header-photo-rotation);
+    @include photo-base;
+    @include photo-frame;
+    @include photo-size($width: $app-header-photo-width, $height: $app-header-photo-height);
+    display: block;
+  }
 }
 
 // Application header: text, my name & position
