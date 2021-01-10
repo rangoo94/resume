@@ -9,8 +9,8 @@ const hasSmoothScrollMechanism = !!Element.prototype.scrollIntoView
  * @returns {Element}
  */
 function prepareAnchorElement (element, offset) {
-  // Build anchor element
-  const anchorElement = document.createElement('a')
+  // Build anchor element - use <span> so it will not be recognized as crawlable link
+  const anchorElement = document.createElement('span')
 
   // Make sure that it will not touch anything
   anchorElement.style.display = 'inline-block'
