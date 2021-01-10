@@ -39,7 +39,7 @@
     font-weight: 500;
     line-height: 1.2em;
 
-    > h4 {
+    > strong {
       display: inline;
       font-family: inherit;
       font-size: 1.3em;
@@ -96,7 +96,7 @@
     padding-left: $spacing;
   }
 
-  #{unquote('.#{$base-class-name}__header')} > h4 + span {
+  #{unquote('.#{$base-class-name}__header')} > strong + span {
     white-space: nowrap;
   }
 
