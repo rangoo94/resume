@@ -177,6 +177,15 @@
               <li>
                 <figure class="technologies-grid__entry">
                   <div class="technologies-grid__image">
+                    <img src="<%= require('../assets/technologies/typescript.svg') %>" class="smallish" alt="TypeScript">
+                  </div>
+                  <figcaption>TypeScript</figcaption>
+                </figure>
+              </li>
+
+              <li>
+                <figure class="technologies-grid__entry">
+                  <div class="technologies-grid__image">
                     <img src="<%= require('../assets/technologies/js.svg') %>" class="smallish" alt="JavaScript">
                   </div>
                   <figcaption>JavaScript</figcaption>
@@ -225,15 +234,6 @@
                     <img src="<%= require('../assets/technologies/cssnext.svg') %>" class="smallish" alt="CSS-next">
                   </div>
                   <figcaption class="nowrap">CSS&#8209;next</figcaption>
-                </figure>
-              </li>
-
-              <li>
-                <figure class="technologies-grid__entry">
-                  <div class="technologies-grid__image">
-                    <img src="<%= require('../assets/technologies/webcomponents.svg') %>" class="smallish" alt="Web Components">
-                  </div>
-                  <figcaption>Web Components</figcaption>
                 </figure>
               </li>
 
@@ -499,6 +499,31 @@
           <!-- Experience - projects list -->
           <section class="projects-list" id="experience-list">
             <ul>
+
+              <li>
+                <article class="project-card">
+                  <div class="project-card__image">
+                    <a target="_blank" rel="noopener" href="https://www.evidentid.com/">
+                      <img src="<%= require('../assets/organizations/evidentid.svg') %>" alt="Evident ID logo">
+                    </a>
+                  </div>
+
+                  <div class="project-card__content">
+                    <header class="project-card__header">
+                      <strong>Frontend Developer / Lead</strong> <span>@&nbsp;Evident ID</span>
+                    </header>
+
+                    <div class="project-card__date">
+                      <time datetime="2019-09">09.2019</time> to <time datetime="2021-01">now</time>
+                    </div>
+
+                    <div class="project-card__description">
+                      Proposing architecture, building and maintaining several front-end applications with Vue and TypeScript.
+                    </div>
+                  </div>
+                </article>
+              </li>
+
               <li>
                 <article class="project-card">
                   <div class="project-card__image project-card__image--opposite-background">
@@ -753,28 +778,6 @@
 
                     <div class="project-card__description">
                       CRM System for advanced MLM structure selling gold.
-                    </div>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="project-card">
-                  <div class="project-card__image">
-                    <figure class="initials">MV</figure>
-                  </div>
-
-                  <div class="project-card__content">
-                    <header class="project-card__header">
-                      <strong>Full&#8209;Stack Web Developer</strong> <span>@&nbsp;MegustaVid</span>
-                    </header>
-
-                    <div class="project-card__date">
-                      <time datetime="2012-02">02.2012</time> to <time datetime="2012-03">03.2012</time>
-                    </div>
-
-                    <div class="project-card__description">
-                      Full system for uploading files and videos with video streamer; also server administration.
                     </div>
                   </div>
                 </article>
