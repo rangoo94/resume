@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" crossorigin="anonymous">
     <link rel="icon" href="<%- require('../assets/images/small-icon.png') %>">
-    <script src="https://kit.fontawesome.com/d4d86dc16d.js" crossorigin="anonymous"></script>
+    <script async src="https://kit.fontawesome.com/d4d86dc16d.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- My "Person" definition -->
@@ -71,12 +71,11 @@
       <div class="app-content">
         <!-- Website header -->
         <header class="app-header">
-          <img
-            class="app-header__photo"
-            id="my-photo"
-            src="<%= require('../assets/images/photo.jpg') %>"
-            alt="Dawid Rusnak photo"
-          >
+          <picture class="app-header__photo" id="my-photo">
+            <source srcset="<%= require('../assets/images/photo.webp') %>" type="image/webp">
+            <source srcset="<%= require('../assets/images/photo.jpg') %>" type="image/jpeg">
+            <img src="<%= require('../assets/images/photo.jpg') %>" alt="Dawid Rusnak photo">
+          </picture>
 
           <h1 class="app-header__text">
             Hey, I am <strong class="app-header__name">
