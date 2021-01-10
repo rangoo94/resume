@@ -5,7 +5,6 @@
     <title>Dawid Rusnak - Software Architect &amp; Web Application Specialist</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
-    <link rel="stylesheet" crossorigin href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" crossorigin href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700">
   </head>
   <body>
@@ -44,19 +43,19 @@
               <ul class="app-condensed-header__list">
                 <li>
                   <a data-masked-attr="href" href="https://www.linkedin.com/in/dawidrusnak" target="_blank">
-                    <i class="fab fa-linkedin-in"></i> <span data-masked>dawidrusnak</span>
+                    <%= require('../assets/icons/linkedin-in.svg') %> <span data-masked>dawidrusnak</span>
                   </a>
                 </li>
 
                 <li>
                   <a data-masked-attr="href" href="https://github.com/rangoo94" target="_blank">
-                    <i class="fab fa-github-alt"></i> <span data-masked>rangoo94</span>
+                    <%= require('../assets/icons/github-alt.svg') %> <span data-masked>rangoo94</span>
                   </a>
                 </li>
 
                 <li>
                   <a data-masked-attr="href" href="callto://rangoodev" target="_blank">
-                    <i class="fab fa-skype"></i> <span data-masked>rangoodev</span>
+                    <%= require('../assets/icons/skype.svg') %> <span data-masked>rangoodev</span>
                   </a>
                 </li>
               </ul>
@@ -463,5 +462,10 @@
       <!--/ Processing agreement -->
     </div>
     <!--/ Resume -->
+
+    <!-- FontAwesome licensing note -->
+    <meta name="fontawesome-svg-icons-used" content="github-alt, linkedin-in, skype">
+    <meta name="fontawesome-svg-icons-license" content="https://fontawesome.com/license">
+    <!--/ FontAwesome licensing note -->
   </body>
 </html>

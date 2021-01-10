@@ -86,6 +86,17 @@ abbr[title] {
   white-space: nowrap;
 }
 
+// Set-up icon styling
+
+svg.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1.01em;
+  position: relative;
+  top: -0.05em;
+}
+
 // Style selection
 
 ::selection {

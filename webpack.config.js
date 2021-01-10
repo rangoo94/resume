@@ -57,9 +57,15 @@ module.exports = {
         test: /\.scss$/,
         use: [ styleLoader, 'css-loader', 'postcss-loader', resolveUrlLoader, sassLoader ]
       },
-
+      {
+        test: /[\/\\]icons[\/\\][^\/\\]+\.svg$/,
+        use: [
+          { loader: 'svg-inline-loader', options: { classPrefix: 'icon icon--' } }
+        ]
+      },
       {
         test: /\.(?:svg|png|jpg|jpeg|gif|webp)$/,
+        exclude: /[\/\\]icons[\/\\][^\/\\]+\.svg$/,
         use: imageLoaders
       }
     ]
@@ -108,29 +114,6 @@ module.exports = {
           handler: 'CacheFirst',
           options: {
             cacheName: 'google-fonts-webfonts',
-            cacheableResponse: {
-              statuses: [ 0, 200 ]
-            },
-            expiration: {
-              maxEntries: 30,
-              maxAgeSeconds: 60 * 60 * 24 * 365
-            }
-          }
-        },
-
-        // FontAwesome icons
-        {
-          urlPattern: /^https:\/\/use\.fontawesome\.com\/releases\/.*\.css$/,
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'fontawesome-stylesheets'
-          }
-        },
-        {
-          urlPattern: /^https:\/\/use\.fontawesome\.com\/releases\/.*\.(woff2|ttf|woff|eot|svg)/,
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'fontawesome-webfonts',
             cacheableResponse: {
               statuses: [ 0, 200 ]
             },

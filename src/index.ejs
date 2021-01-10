@@ -7,10 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <meta name="description" content="Full-Stack Web Developer and Software Architect, who specializes in React on front-end and Node.js in back-end.">
     <meta name="keywords" content="software architect, web architect, full-stack, developer, software, development, frontend, backend, nodejs">
-    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="<%- require('../assets/images/small-icon.png') %>">
-    <script async src="https://kit.fontawesome.com/d4d86dc16d.js" crossorigin></script>
     <!-- Asynchronous Google Font -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" crossorigin>
     <link
@@ -44,19 +42,19 @@
           <ul class="app-top-navigation__social">
             <li>
               <a href="https://www.linkedin.com/in/dawidrusnak" rel="noopener" target="_blank">
-                <i class="fab fa-linkedin-in"></i> LinkedIn
+                <%= require('../assets/icons/linkedin-in.svg') %> LinkedIn
                 <span>@dawidrusnak</span>
               </a>
             </li>
             <li>
               <a href="https://github.com/rangoo94" rel="noopener" target="_blank">
-                <i class="fab fa-github-alt"></i> GitHub
+                <%= require('../assets/icons/github-alt.svg') %> GitHub
                 <span>@rangoo94</span>
               </a>
             </li>
             <li>
               <a href="callto://rangoodev" target="_blank">
-                <i class="fab fa-skype"></i> Skype
+                <%= require('../assets/icons/skype.svg') %> Skype
                 <span>@rangoodev</span>
               </a>
             </li>
@@ -70,7 +68,7 @@
             <li><a href="#section-contact" data-scroll-offset="100">Contact</a></li>
             <li class="app-top-navigation__link--special">
               <a href="resume.pdf" target="_blank">
-                <i class="fas fa-file-pdf"></i> Resume
+                <%= require('../assets/icons/file-pdf.svg') %> Resume
               </a>
             </li>
           </ul>
@@ -132,7 +130,7 @@
           <ul>
             <li>
               <strong>30+</strong>
-              big projects <abbr title="and hundreds of smaller!"><i class="far fa-question-circle"></i></abbr>
+              big projects <abbr title="and hundreds of smaller!"><%= require('../assets/icons/question-circle.svg') %></abbr>
             </li>
             <li>
               <strong>30+</strong>
@@ -491,7 +489,7 @@
             Don't hesitate to ask me for details or&nbsp;different projects,
             it's just a list of selected projects and cooperation,
             to show summary of my career.
-            You&nbsp;also may want to visit my <a class="block-link" href="https://www.linkedin.com/in/dawidrusnak" rel="noopener" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a> account,
+            You&nbsp;also may want to visit my <a class="block-link" href="https://www.linkedin.com/in/dawidrusnak" rel="noopener" target="_blank"><%= require('../assets/icons/linkedin-in.svg') %> LinkedIn</a> account,
             where I've got different content included.
           </p>
           <!--/ Experience introduction -->
@@ -824,7 +822,7 @@
                       <ul class="links-list">
                         <li>
                           <a href="http://bit.ly/metaprogramowaniejs" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Slides
+                            <%= require('../assets/icons/link.svg') %> Slides
                           </a>
                         </li>
                       </ul>
@@ -859,12 +857,12 @@
                       <ul class="links-list">
                         <li>
                           <a href="http://bit.ly/node-js-behind" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Slides
+                            <%= require('../assets/icons/link.svg') %> Slides
                           </a>
                         </li>
                         <li>
                           <a href="https://www.youtube.com/watch?v=GgH1DDnzkdI" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Recording
+                            <%= require('../assets/icons/link.svg') %> Recording
                           </a>
                         </li>
                       </ul>
@@ -897,12 +895,12 @@
                       <ul class="links-list">
                         <li>
                           <a href="http://bit.ly/react-realtime" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Slides
+                            <%= require('../assets/icons/link.svg') %> Slides
                           </a>
                         </li>
                         <li>
                           <a href="http://bit.ly/1UTPQOB" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Repository
+                            <%= require('../assets/icons/link.svg') %> Repository
                           </a>
                         </li>
                       </ul>
@@ -924,8 +922,8 @@
             I've been working on many open source projects, some of them has reached public phase.
             I&nbsp;selected some of them, which - in my opinion - shows better my skills.
             You may also want to see my
-            <a class="block-link" href="https://github.com/rangoo94" rel="noopener" target="_blank"><i class="fab fa-github-alt"></i> GitHub</a> or
-            <a class="block-link" href="https://www.npmjs.com/~rangoo" rel="noopener" target="_blank"><i class="fab fa-npm"></i> NPM</a> account.
+            <a class="block-link" href="https://github.com/rangoo94" rel="noopener" target="_blank"><%= require('../assets/icons/github-alt.svg') %> GitHub</a> or
+            <a class="block-link" href="https://www.npmjs.com/~rangoo" rel="noopener" target="_blank"><%= require('../assets/icons/npm.svg') %> NPM</a> account.
           </p>
 
           <!-- Open source projects > Projects list -->
@@ -949,12 +947,12 @@
                       <ul class="links-list">
                         <li>
                           <a href="https://github.com/PublicInMotionGmbH/sass-merge" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Repository
+                            <%= require('../assets/icons/link.svg') %> Repository
                           </a>
                         </li>
                         <li>
                           <a href="https://www.npmjs.com/package/@talixo/sass-merge" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> NPM registry
+                            <%= require('../assets/icons/link.svg') %> NPM registry
                           </a>
                         </li>
                       </ul>
@@ -981,17 +979,17 @@
                       <ul class="links-list">
                         <li>
                           <a href="https://github.com/PublicInMotionGmbH/ui-kit" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Repository
+                            <%= require('../assets/icons/link.svg') %> Repository
                           </a>
                         </li>
                         <li>
                           <a href="https://publicinmotiongmbh.github.io/ui-kit/" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Storybook
+                            <%= require('../assets/icons/link.svg') %> Storybook
                           </a>
                         </li>
                         <li>
                           <a href="https://www.npmjs.com/search?q=%40talixo%2F" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> NPM search
+                            <%= require('../assets/icons/link.svg') %> NPM search
                           </a>
                         </li>
                       </ul>
@@ -1018,12 +1016,12 @@
                       <ul class="links-list">
                         <li>
                           <a href="https://github.com/rangoo94/object-regexp" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Repository
+                            <%= require('../assets/icons/link.svg') %> Repository
                           </a>
                         </li>
                         <li>
                           <a href="https://www.npmjs.com/package/object-regexp" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> NPM registry
+                            <%= require('../assets/icons/link.svg') %> NPM registry
                           </a>
                         </li>
                       </ul>
@@ -1050,12 +1048,12 @@
                       <ul class="links-list">
                         <li>
                           <a href="https://github.com/rangoo94/universal-lexer" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Repository
+                            <%= require('../assets/icons/link.svg') %> Repository
                           </a>
                         </li>
                         <li>
                           <a href="https://www.npmjs.com/package/universal-lexer" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> NPM registry
+                            <%= require('../assets/icons/link.svg') %> NPM registry
                           </a>
                         </li>
                       </ul>
@@ -1082,12 +1080,12 @@
                       <ul class="links-list">
                         <li>
                           <a href="https://github.com/rangoo94/easen-models" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Repository
+                            <%= require('../assets/icons/link.svg') %> Repository
                           </a>
                         </li>
                         <li>
                           <a href="https://www.npmjs.com/package/easen-models" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> NPM registry
+                            <%= require('../assets/icons/link.svg') %> NPM registry
                           </a>
                         </li>
                       </ul>
@@ -1113,12 +1111,12 @@
                       <ul class="links-list">
                         <li>
                           <a href="https://github.com/rangoo94/easen-di" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> Repository
+                            <%= require('../assets/icons/link.svg') %> Repository
                           </a>
                         </li>
                         <li>
                           <a href="https://www.npmjs.com/package/easen-di" rel="noopener" target="_blank">
-                            <i class="fas fa-link"></i> NPM registry
+                            <%= require('../assets/icons/link.svg') %> NPM registry
                           </a>
                         </li>
                       </ul>
@@ -1149,21 +1147,21 @@
                 <dt>LinkedIn</dt>
                 <dd>
                   <a href="https://www.linkedin.com/in/dawidrusnak" rel="noopener" target="_blank">
-                    <i class="fab fa-linkedin-in"></i> dawidrusnak
+                    <%= require('../assets/icons/linkedin-in.svg') %> dawidrusnak
                   </a>
                 </dd>
 
                 <dt>GitHub</dt>
                 <dd>
                   <a href="https://github.com/rangoo94" rel="noopener" target="_blank">
-                    <i class="fab fa-github-alt"></i> rangoo94
+                    <%= require('../assets/icons/github-alt.svg') %> rangoo94
                   </a>
                 </dd>
 
                 <dt>Skype</dt>
                 <dd>
                   <a href="callto://rangoodev" target="_blank">
-                    <i class="fab fa-skype"></i> rangoodev
+                    <%= require('../assets/icons/skype.svg') %> rangoodev
                   </a>
                 </dd>
               </dl>
@@ -1237,5 +1235,10 @@
     </script>
     <% } %>
     <!--/ Google Analytics -->
+
+    <!-- FontAwesome licensing note -->
+    <meta name="fontawesome-svg-icons-used" content="link, github-alt, linkedin-in, file-pdf, npm, question-circle, skype">
+    <meta name="fontawesome-svg-icons-license" content="https://fontawesome.com/license">
+    <!--/ FontAwesome licensing note -->
   </body>
 </html>

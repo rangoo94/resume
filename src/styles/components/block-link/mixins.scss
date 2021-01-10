@@ -23,7 +23,7 @@
 }
 
 @mixin block-link-icon-margin ($margin: $block-link-icon-margin) {
-  > .fab:first-child {
+  > svg:first-child {
     margin-right: $margin;
 
     [dir=rtl] & {
