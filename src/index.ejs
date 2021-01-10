@@ -9,9 +9,21 @@
     <meta name="keywords" content="software architect, web architect, full-stack, developer, software, development, frontend, backend, nodejs">
     <link rel="preconnect" href="https://kit.fontawesome.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" crossorigin="anonymous">
     <link rel="icon" href="<%- require('../assets/images/small-icon.png') %>">
     <script async src="https://kit.fontawesome.com/d4d86dc16d.js" crossorigin="anonymous"></script>
+    <!-- Asynchronous Google Font -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link
+      rel="stylesheet"
+      media="print"
+      crossorigin="anonymous"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      onload="this.onload=null;this.removeAttribute('media');"
+    >
+    <noscript>
+      <link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    </noscript>
+    <!--/ Asynchronous Google Font -->
   </head>
   <body>
     <!-- My "Person" definition -->
