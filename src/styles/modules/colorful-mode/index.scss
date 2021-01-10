@@ -63,7 +63,7 @@
 
 @include colorful(
   '.app-header__name em',
-  $style: ( color: $color-primary )
+  $style: ( color: darken($color-primary, 5%) )
 );
 
 // Format section headers
@@ -103,7 +103,7 @@
 
 @include colorful(
   'a',
-  $style: ( color: $color-link ),
+  $style: ( color: darken($color-link, 5%) ),
   $not-in: ( '.app-top-navigation__menu', '.app-top-navigation__social' )
 );
 

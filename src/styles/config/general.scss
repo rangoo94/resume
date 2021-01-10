@@ -12,7 +12,7 @@ $color-background-opposite: #000;
 
 $color-text: #32333c;
 $color-text-opposite: #fff;
-$color-link: $color-primary;
+$color-link: darken($color-primary, 5%);
 
 // Font families
 

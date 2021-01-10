@@ -77,7 +77,7 @@ $app-header-line-height: 1.8em !default;
 $app-header-my-name-text-color: inherit !default;
 $app-header-my-name-font-size: 1.4em !default;
 $app-header-my-name-font-weight: 600 !default;
-$app-header-my-position-text-color: $color-primary !default;
+$app-header-my-position-text-color: darken($color-primary, 5%) !default;
 $app-header-my-position-font-size: 0.75em !default;
 $app-header-my-position-font-weight: 400 !default;
 
