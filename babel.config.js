@@ -3,7 +3,7 @@ module.exports = api => {
 
   return {
     presets: [
-      [ '@babel/preset-env', { useBuiltIns: 'entry' } ]
+      [ '@babel/preset-env', { useBuiltIns: 'entry', corejs: 2 } ]
     ],
     plugins: [
       '@babel/plugin-transform-runtime'

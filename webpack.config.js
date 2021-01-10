@@ -16,7 +16,7 @@ const styleLoader = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
 
 const sassLoader = {
   loader: 'sass-loader',
-  options: { implementation: require('sass'), sourceMap: true, sourceMapContents: false }
+  options: { sourceMap: true }
 }
 
 const optimizeImagesLoader = {
@@ -29,7 +29,12 @@ const resolveUrlLoader = {
   options: { keepQuery: true }
 }
 
-const imageLoaders = isProduction ? [ 'file-loader', optimizeImagesLoader ] : [ 'file-loader' ]
+const fileLoader = {
+  loader: 'file-loader',
+  options: { esModule: false }
+}
+
+const imageLoaders = isProduction ? [ fileLoader, optimizeImagesLoader ] : [ fileLoader ]
 
 // Build webpack configuration
 
@@ -37,6 +42,7 @@ module.exports = {
   mode: isProduction ? 'production' : 'development',
 
   output: {
+    publicPath: '',
     filename: isProduction ? '[name].[contenthash].js' : '[name].js'
   },
 
