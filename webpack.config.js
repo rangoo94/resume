@@ -21,12 +21,11 @@ const sassLoader = {
 
 const optimizeImagesLoader = {
   loader: 'image-webpack-loader',
-  options: { svgo: { plugins: [ { cleanupIDs: false } ] } }
+  options: { svgo: { plugins: [ { name: 'preset-default', params: { overrides: { cleanupIDs: false } } } ] } }
 }
 
 const resolveUrlLoader = {
-  loader: 'resolve-url-loader',
-  options: { keepQuery: true }
+  loader: 'resolve-url-loader'
 }
 
 const fileLoader = {

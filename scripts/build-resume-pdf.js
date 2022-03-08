@@ -35,20 +35,23 @@ async function main () {
   process.stdout.write('Building PDFs...\n')
 
   // Prepare headless Chrome through Puppeteer tool
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ args: [ '--no-sandbox', '--lang=en-GB,en' ] })
   const page = await browser.newPage()
+
+  // Set-up PDF settings
+  const settings = { preferCSSPageSize: true, printBackground: true }
 
   // Open resume and load required resources
   await page.goto(`file:${RESUME_FILE_PATH}`, { waitUntil: 'networkidle2' })
 
   // Render PDF of basic resume
-  await page.pdf({ path: OUTPUT_RESUME_FILE_PATH, preferCSSPageSize: true })
+  await page.pdf({ ...settings, path: OUTPUT_RESUME_FILE_PATH })
 
   // Add mask to vulnerable data
   await page.evaluate(() => window.maskResume())
 
   // Render PDF of masked resume
-  await page.pdf({ path: OUTPUT_MASKED_RESUME_FILE_PATH, preferCSSPageSize: true })
+  await page.pdf({ ...settings, path: OUTPUT_MASKED_RESUME_FILE_PATH })
 
   // Close browser session
   await browser.close()
@@ -58,12 +61,12 @@ async function main () {
   const maskedResumeData = await getPdfData(OUTPUT_MASKED_RESUME_FILE_PATH)
 
   // Validate PDFs, that they have only single page each
-  if (resumeData.formImage.Pages.length !== 1) {
-    throw new Error(`Base resume has ${resumeData.formImage.Pages.length} pages instead of 1.`)
+  if (resumeData.Pages.length !== 1) {
+    throw new Error(`Base resume has ${resumeData.Pages.length} pages instead of 1.`)
   }
 
-  if (maskedResumeData.formImage.Pages.length !== 1) {
-    throw new Error(`Masked resume has ${maskedResumeData.formImage.Pages.length} pages instead of 1.`)
+  if (maskedResumeData.Pages.length !== 1) {
+    throw new Error(`Masked resume has ${maskedResumeData.Pages.length} pages instead of 1.`)
   }
 
   // Show log that it's successful

@@ -75,6 +75,36 @@ html.printable-resume {
   }
 }
 
+// Tweak: adjust size to properly work with latest Chrome/Puppeteer
+
+@media only print {
+  html.printable-resume {
+    .app-content > .app-section {
+      margin: 2.25rem 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .app-section p {
+      line-height: 1.68em;
+    }
+
+    .project-card__description {
+      line-height: 1.64em;
+    }
+
+    .project-card .project-card__content {
+      padding: 1.4625rem 1.25rem;
+    }
+
+    .skills-matrix-element__description {
+      line-height: 1.5em;
+    }
+  }
+}
+
 // Setting up "screen" development simulation
 
 @media only screen {
