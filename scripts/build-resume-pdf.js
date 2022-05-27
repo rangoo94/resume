@@ -35,11 +35,17 @@ async function main () {
   process.stdout.write('Building PDFs...\n')
 
   // Prepare headless Chrome through Puppeteer tool
-  const browser = await puppeteer.launch({ args: [ '--no-sandbox', '--lang=en-GB,en' ] })
+  const browser = await puppeteer.launch({
+    args: [
+      '--no-sandbox',
+      '--font-render-hinting=none',
+      '--lang=en-GB,en',
+    ],
+  })
   const page = await browser.newPage()
 
   // Debug information about Chrome version
-  process.stdout.write(`Browser version: ${await page.browser().version()}\n`);
+  process.stdout.write(`Browser version: ${await page.browser().version()}\n`)
 
   // Set-up PDF settings
   const settings = { preferCSSPageSize: true, printBackground: true }
