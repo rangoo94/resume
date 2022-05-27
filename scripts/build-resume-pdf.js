@@ -38,6 +38,9 @@ async function main () {
   const browser = await puppeteer.launch({ args: [ '--no-sandbox', '--lang=en-GB,en' ] })
   const page = await browser.newPage()
 
+  // Debug information about Chrome version
+  process.stdout.write(`Browser version: ${await page.browser().version()}\n`);
+
   // Set-up PDF settings
   const settings = { preferCSSPageSize: true, printBackground: true }
 
