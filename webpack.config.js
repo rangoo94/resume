@@ -140,9 +140,8 @@ module.exports = {
   ],
 
   devServer: {
-    contentBase: path.join(__dirname, 'src'),
-    disableHostCheck: true,
-    watchContentBase: true,
+    static: path.join(__dirname, 'src'),
+    allowedHosts: 'all',
     hot: true
   }
 }
