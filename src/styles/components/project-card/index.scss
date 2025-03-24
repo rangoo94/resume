@@ -1,9 +1,0 @@
-@import './config';
-@import './placeholders';
-@import './mixins';
-
-// Use common class for common settings
-
-.project-card {
-  @extend %project-card;
-}

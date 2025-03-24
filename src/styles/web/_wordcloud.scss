@@ -1,0 +1,62 @@
+@use 'sass:color';
+
+@use '../variables' as *;
+
+.word-cloud {
+  pointer-events: none;
+  user-select: none;
+
+  svg {
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+
+    text {
+      text-anchor: middle;
+      font-family: 'Red Hat Display';
+      font-weight: 400;
+    }
+
+    text::selection {
+      background: transparent;
+      fill: rgba(#333, 0.3);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  svg text {
+    fill: rgba(#333, 0.3);
+    transition: 300ms fill ease-in-out;
+  }
+
+  .be & svg text.be,
+  .db & svg text.db,
+  .fe & svg text.fe,
+  .ms & svg text.ms,
+  .do & svg text.do,
+  .be--secondary & svg text.be,
+  .db--secondary & svg text.db,
+  .fe--secondary & svg text.fe,
+  .ms--secondary & svg text.ms,
+  .do--secondary & svg text.do {
+    &, &::selection {
+      fill: color.mix(#000, $color-primary, 25%);
+    }
+  }
+
+  .be--hover & svg text.be,
+  .db--hover & svg text.db,
+  .fe--hover & svg text.fe,
+  .ms--hover & svg text.ms,
+  .do--hover & svg text.do {
+    fill: color.adjust(#333, $alpha: -0.3);
+  }
+}

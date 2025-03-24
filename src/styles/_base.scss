@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'fonts';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+::selection {
+  color: #fff;
+  fill: #fff;
+  background: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+  font: 16px/1.666666 $font-family;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+a {
+  color: $color-link;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

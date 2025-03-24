@@ -1,0 +1,48 @@
+@use 'mixins' as *;
+
+.highlights {
+  position: relative;
+  border-color: #ccc; // FIXME
+  border-style: solid;
+  border-width: 2px 0;
+  padding-top: 0.8rem;
+  margin: 0 0 2rem;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  display: flex;
+
+  &-entry {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.8rem;
+    flex: 1 0;
+  }
+
+  strong {
+    margin-right: 0.4rem;
+    display: block;
+    font-size: 1.4em;
+    font-weight: 800;
+  }
+
+  &:before {
+    bottom: 100%;
+  }
+
+  &:after {
+    top: 100%;
+  }
+
+  &:before, &:after {
+    box-shadow:
+            generate-spreading-box-shadow($color: #ccc, $step-x: -4rem, $segments: 20),
+            generate-spreading-box-shadow($color: #ccc, $step-x: 4rem, $segments: 20); // FIXME
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}

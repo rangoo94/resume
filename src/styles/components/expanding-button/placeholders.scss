@@ -1,7 +1,0 @@
-@import './mixins';
-
-// Base placeholder
-
-%expanding-button {
-  @include expanding-button($base-class-name: $expanding-button-base-class-name);
-}

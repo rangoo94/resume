@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://www.drcode.pl">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta name="theme-color" content="#082531" />
+    <title>Dawid Rusnak - Software Engineer & Architect</title>
+    <meta name="description" content="Software Architect and Full-Stack Developer, specialized in designing and implementing scalable, high-performance systems, improving architecture, security, and automation.">
+    <meta name="keywords" content="software architect, web architect, full-stack, developer, software, development, frontend, backend, nodejs, golang">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Top -->
+      <header class="hero">
+        <div class="stars">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <nav class="navbar">
+          <div class="navbar-content">
+            <a href="<%= linkedinUrl %>" title="LinkedIn" class="social-link" rel="noopener" target="_blank">
+              <%- icons.linkedinIn %>
+            </a>
+            <a href="<%= githubUrl %>" title="GitHub" class="social-link" rel="noopener" target="_blank">
+              <%- icons.githubAlt %>
+            </a>
+            <a href="resume.pdf" class="resume-link" target="_blank">
+              <%- icons.fileWaveform %>
+              Resume
+            </a>
+          </div>
+        </nav>
+        <div class="hero-content">
+          <h1 class="hero-name"><%= person.name %></h1>
+          <h1 class="hero-title"><%= person.jobTitle %></h1>
+        </div>
+
+        <!-- make the next section rounded -->
+        <div class="hero-ellipse">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 25" width="100%">
+            <ellipse cx="750" cy="25" rx="775" ry="25"></ellipse>
+          </svg>
+        </div>
+      </header>
+
+      <!-- About me -->
+      <section class="page">
+        <div class="page-content">
+          <header class="page-header">
+            <h2>About Me</h2>
+          </header>
+
+          <div class="page-body">
+            <p>
+              I'm a <strong>Software Architect and Full-Stack Developer</strong> with a passion for
+              <strong>building high-performance, scalable, robust, and maintainable systems</strong>
+              and refining the developer experience.
+              I've worked across <strong>product companies, software houses, and startups</strong>,
+              tackling a wide range of challenges and finding ways to make software not just work, but work efficiently.
+              Many times I had a chance to lead initiatives of iterative software migration.
+            </p>
+            <p>
+              Beyond coding, I contribute by <strong>driving technical decisions, improving workflows,
+              and making development more efficient</strong>.
+              I enjoy sharing knowledge through <strong>mentoring, workshops, and architectural guidance</strong>,
+              helping teams <strong>work smarter and build better software</strong>.
+            </p>
+            <p>
+              My expertise is quite broad, but I most enjoy challenges on performance, security, and automation,
+              especially in the area of developer tooling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies -->
+      <section class="page">
+        <div class="page-ellipse">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 25" width="100%">
+            <ellipse cx="750" cy="0" rx="775" ry="25"></ellipse>
+          </svg>
+        </div>
+
+        <div class="page-content">
+          <header class="page-header">
+            <h2>Technologies</h2>
+          </header>
+
+          <div class="page-description">
+            <p>
+              I have worked with a wide range of technologies across different types of projects, from product companies to software houses. My experience spans both backend and frontend development, as well as DevOps and automation. While the list here isn’t exhaustive, it reflects the key technologies I've used extensively. I'm always curious about new tools and approaches - especially when they bring real value.
+            </p>
+          </div>
+
+          <div class="page-body">
+            <div class="technologies be db--secondary">
+              <div class="word-cloud">
+                <%- technologiesWordCloud %>
+              </div>
+
+              <div class="technologies-navbar">
+                <button data-type="be" data-secondary-type="db">Backend</button><button data-type="fe">Frontend</button><button data-type="do">DevOps</button><button data-type="ms">Misc</button>
+              </div>
+
+              <div class="technologies-explain">
+                <p class="be">
+                  My recent focus has been on <strong>Golang</strong> and <strong>TypeScript</strong>,
+                  but I also worked with <strong>Python</strong> and many other languages in my career.
+                  I prefer <strong>PostgreSQL</strong> as a first choice, but I've also worked other databases,
+                  i.e. <strong>MongoDB</strong>, <strong>Redis</strong>, <strong>ElasticSearch</strong>, or DynamoDB.
+                  I have strong expertise in SOA, microservices, and distributed systems, I worked with serverless too.
+                  AWS is my preferred cloud platform, but I've also worked with GCP and Azure.
+                  I'm highly experienced with optimizing performance, security, and developer tooling.
+                </p>
+                <p class="fe">
+                  I've worked on a variety of frontend projects and prefer the <strong>React</strong> ecosystem,
+                  but I also have 2 years of <strong>Vue.js</strong> experience and other frameworks too.
+                  Over the years, I've worked with various frontend stacks, including <strong>Angular</strong>, <strong>Angular.js</strong>, <strong>Backbone</strong>, and more.
+                  I prefer <strong>SCSS</strong> but have worked with <strong>CSS-in-JS</strong>, Less, and others.
+                  I have strong experience building performant, maintainable, and scalable frontend applications.
+                </p>
+                <p class="do">
+                  I have deep expertise in <strong>Docker</strong> and <strong>Kubernetes</strong>,
+                  with experience in optimizing containerized workloads.
+                  I'm well-versed in CI/CD pipelines, including <strong>Jenkins</strong>, <strong>GitLab</strong>, and <strong>GitHub Actions</strong>,
+                  and have hands-on experience with <strong>Terraform</strong>, <strong>Helm Charts</strong>, and infrastructure automation.
+                </p>
+                <p class="ms">
+                  I have a strong passion for performance optimization, ensuring efficiency across the entire software stack.
+                  I'm highly skilled in automation, improving developer workflows and system reliability.
+                  I've worked with many message queues, including <strong>RabbitMQ</strong>, <strong>Kafka</strong>, and cloud-native solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- make the next section rounded -->
+        <div class="page-ellipse">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 25" width="100%">
+            <ellipse cx="750" cy="25" rx="775" ry="25"></ellipse>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Selected Experience -->
+      <section class="page">
+        <div class="page-content">
+          <header class="page-header">
+            <h2>Selected Experience</h2>
+          </header>
+
+          <div class="page-description">
+            <p>Over the years, I've taken on a variety of roles, from hands-on development to architecture design and leading full software development lifecycles (SDLC) for both startups and established companies.</p>
+
+            <p>
+              I've highlighted here the full-time positions I've been working on. Besides that, I also worked on independent projects and consulting. I'm passionate about designing scalable, high-quality systems and enjoy working with teams that value clean architecture and well-thought-out engineering decisions.
+              If you're curious about specific projects, feel free to reach out, or check out my <a href="<%= linkedinUrl %>" rel="noopener" target="_blank"><%- icons.linkedin %> LinkedIn</a> for a broader view.
+            </p>
+          </div>
+
+          <div class="page-body">
+            <div class="cards">
+              <% for (const project of projects.filter(x => !x.skipped)) { %>
+              <div class="card">
+                <div class="card-image <%= (project.company.imageEnhancements || []).join(' ') %>">
+                  <% if (project.company.url) { %>
+                  <a href="<%= project.company.url %>" rel="noopener" target="_blank">
+                    <img src="<%= project.company.image %>" alt="<%= project.company.name %> Logo">
+                  </a>
+                  <% } else { %>
+                  <img src="<%= project.company.image %>" alt="Company Logo">
+                  <% } %>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="card-title"><%= project.company.position %><% if (project.company.secondary) { %> <small>and <%= project.company.secondary %></small><% } %></span><span class="card-at card-at--prefixed"><%= project.company.name %></span>
+                  </div>
+                  <div class="card-time">
+                    <span class="card-start"><%= formatWorkDate(project.period.start) %></span><span class="card-end"><%= project.period.end ? formatWorkDate(project.period.end) : 'now' %></span>
+                    <span class="card-period"><%= formatWorkPeriod(project.period.start, project.period.end) %></span>
+                  </div>
+                  <div class="card-description">
+                    <%- project.description %>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Open Source -->
+      <section class="page">
+        <!-- make the previous section rounded -->
+        <div class="page-ellipse">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 25" width="100%">
+            <ellipse cx="750" cy="0" rx="775" ry="25"></ellipse>
+          </svg>
+        </div>
+
+        <div class="page-content">
+          <header class="page-header">
+            <h2>Selected Open Source</h2>
+          </header>
+
+          <div class="page-description">
+            <p>I've been working on many open source projects, some of them has reached public phase. I selected some of them, which - in my opinion - shows better my skills. You may also want to see my <a href="https://www.github.com/rangoo94" rel="noopener" target="_blank"><%- icons.github %> GitHub</a>.</p>
+          </div>
+
+          <div class="page-body">
+            <div class="cards cards--two">
+              <% for (const project of oss.filter(x => !x.skipped)) { %>
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="card-title"><%= project.project.name %></span><% if (project.project.brief) { %><span class="card-at"><%= project.project.brief %></span><% } %>
+                  </div>
+                  <div class="card-time">
+                    <span class="card-period"><%= formatWorkDate(project.period.start) %></span>
+                  </div>
+                  <div class="card-description">
+                    <%- project.description %>
+                  </div>
+                  <div class="card-links">
+                    <% for (const link of project.links) { %>
+                    <a href="<%- link.url %>" rel="noopener" target="_blank">
+                      <%- icons.link %> <%- link.label %>
+                    </a>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+
+        <!-- make the next section rounded -->
+        <div class="page-ellipse">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 25" width="100%">
+            <ellipse cx="750" cy="25" rx="775" ry="25"></ellipse>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Talks -->
+      <section class="page">
+        <div class="page-content">
+          <header class="page-header">
+            <h2>Talks</h2>
+          </header>
+
+          <div class="page-description">
+            <p>Beside internal workshops and lectures I've done, I had some occasions to talk on public events.</p>
+          </div>
+
+          <div class="page-body">
+            <div class="cards">
+              <% for (const talk of talks.filter(x => !x.skipped)) { %>
+              <div class="card">
+                <div class="card-image <%= (talk.conference.imageEnhancements || []).join(' ') %>">
+                  <% if (talk.conference.url) { %>
+                  <a href="<%= talk.conference.url %>" rel="noopener" target="_blank">
+                    <img src="<%= talk.conference.image %>" alt="<%= talk.conference.name %> Logo">
+                  </a>
+                  <% } else { %>
+                  <img src="<%= talk.conference.image %>" alt="Company Logo">
+                  <% } %>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="card-title"><%= talk.subject.name %></span><span class="card-at card-at--prefixed"><%= talk.conference.name %></span>
+                  </div>
+                  <div class="card-time">
+                    <span class="card-period"><%= formatWorkDate(talk.period.start) %></span>
+                  </div>
+                  <div class="card-description">
+                    <%- talk.description %>
+                  </div>
+                  <div class="card-links">
+                    <% for (const link of talk.links) { %>
+                    <a href="<%- link.url %>" rel="noopener" target="_blank">
+                      <%- icons.link %> <%- link.label %>
+                    </a>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+
+        <!-- make the next section rounded -->
+        <div class="page-ellipse">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 25" width="100%">
+            <ellipse cx="750" cy="25" rx="775" ry="25"></ellipse>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section class="page">
+        <div class="page-content">
+          <header class="page-header">
+            <h2>Leave a Message</h2>
+          </header>
+
+          <div class="page-center">
+            If you are interested in setting up project or longer cooperation with me, don't hesitate to contact me in any way.
+          </div>
+
+          <div class="page-body page-body--columns">
+            <div class="contact">
+              <div class="contact-entry">
+                <a href="<%= linkedinUrl %>" rel="noopener" target="_blank">
+                  <%- icons.linkedin %> dawidrusnak
+                </a>
+              </div>
+              <div class="contact-entry">
+                <a href="<%= person.email %>" target="_blank">
+                  <%- icons.envelope %> <%= person.email.replace('mailto:', '') %>
+                </a>
+              </div>
+              <div class="contact-entry">
+                <a href="<%= githubUrl %>" rel="noopener" target="_blank">
+                  <%- icons.github %> rangoo94
+                </a>
+              </div>
+              <div class="contact-entry">
+                <a href="tel:<%= person.telephone %>" target="_blank">
+                  <%- icons.phone %> <%= person.telephone %>
+                </a>
+              </div>
+            </div>
+
+            <div class="company">
+              <div class="company-entry">
+                <strong>VAT Number</strong> PL9442246323
+              </div>
+              <div class="company-entry">
+                <strong>NIP</strong> 9442246323
+              </div>
+              <div class="company-entry">
+                <strong>REGON</strong> 123128644
+              </div>
+              <div class="company-entry company-entry--sole">
+                &copy; Dawid Rusnak DRCode
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Google Analytics -->
+    <% if (process.env.NODE_ENV === 'production') { %>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-52415029-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <% } %>
+    <!--/ Google Analytics -->
+
+    <script type="application/ld+json"><%- JSON.stringify(person) %></script>
+  </body>
+</html>

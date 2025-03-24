@@ -1,9 +1,0 @@
-@import './config/general';
-
-$blockquote-padding-horizontal: 1.25rem !default;
-$blockquote-padding-vertical: 1.25rem !default;
-$blockquote-background-color: mix(#f5f5f5, $color-primary, 90%) !default;
-$blockquote-text-color: mix($blockquote-background-color, mix($color-primary, #000, 25%), 20%) !default;
-
-$container-max-width: 1200px !default;
-$container-max-width-percentage: 95% !default;

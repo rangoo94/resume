@@ -1,0 +1,84 @@
+// @see {@link https://github.com/RedHatOfficial/RedHatFont}
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-Light.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-LightItalic.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-Regular.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-Italic.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-Medium.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-MediumItalic.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-SemiBold.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-SemiBoldItalic.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-Bold.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-BoldItalic.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-Black.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Red Hat Display'), url('/fonts/RedHatDisplay-BlackItalic.woff2') format('woff');
+}

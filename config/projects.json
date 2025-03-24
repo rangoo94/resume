@@ -1,0 +1,127 @@
+[
+  {
+    "selected": true,
+    "company": {
+      "name": "Testkube",
+      "position": "Full-stack Developer",
+      "secondary": "Technical Lead",
+      "url": "https://www.testkube.io",
+      "image": "images/testkube.svg",
+      "imageEnhancements": ["black"]
+    },
+    "period": {
+      "start": "2023-03-01",
+      "end": null
+    },
+    "description": "I led a frontend re-architecture for modularity and code reuse, then designed and implemented a backend for new test orchestration system (<a href=\"https://docs.testkube.io/articles/test-workflows-high-level-architecture\" rel=\"noopener\" target=\"_blank\">Test&nbsp;Workflows</a>), enabling scalable, flexible, and distributed Kubernetes-based execution. I prepared a full system re-architecture to enhance security, performance, and multi-cluster support. As a technical leader, I drove architectural decisions, optimized scalability, and mentored the team while working with Golang, React, NATS, and MongoDB."
+  },
+  {
+    "selected": true,
+    "company": {
+      "name": "Evident ID",
+      "position": "Frontend Developer",
+      "secondary": "Technical Lead",
+      "url": "https://www.evidentid.com/",
+      "image": "images/evidentid.svg",
+      "imageEnhancements": []
+    },
+    "period": {
+      "start": "2019-09-01",
+      "end": "2022-04-30"
+    },
+    "description": "I led the Frontend team and drove system modernization by migrating from Mithril.js to Vue.js, improving performance, configurability, and accelerating feature delivery. Architected and built FE solutions for risk management tools, enhanced CI/CD pipelines, and optimized developer workflows. Shaped system architecture, contributing to scalable backend solutions in Python and Scala."
+  },
+  {
+    "selected": true,
+    "company": {
+      "name": "Talixo",
+      "position": "Senior Frontend Developer",
+      "secondary": "Technical Lead",
+      "url": "https://talixo.de/deutschebahn/",
+      "image": "images/talixo.png",
+      "imageEnhancements": ["black"]
+    },
+    "period": {
+      "start": "2018-03-01",
+      "end": "2019-02-28"
+    },
+    "description": "I led front-end rearchitecture of a transportation platform, migrating from jQuery to React + Redux. Built a WYSIWYG editor reducing landing page setup from days to minutes. Optimized Python/Django backend, improved scalability, mentored engineers, and enhanced software delivery processes. Contributed to open-source UI Kit and SCSS tooling."
+  },
+  {
+    "selected": true,
+    "company": {
+      "name": "G2A",
+      "position": "Senior Software Developer",
+      "secondary": "Technical Lead",
+      "url": "https://www.g2a.com/",
+      "image": "images/g2a.svg",
+      "imageEnhancements": []
+    },
+    "period": {
+      "start": "2017-01-01",
+      "end": "2017-10-31"
+    },
+    "description": "Together with my previous team and CTO from Grand Parade, after its acquisition, we have joined G2A - a major digital marketplace to enhance architecture, modernize software, and mentor teams. Led integration system development, front-end migration to React, and a microservices lottery platform. Improved software lifecycle, scalability, and developer experience while ensuring resilient, high-performance solutions under tight deadlines."
+  },
+  {
+    "skipped": true,
+    "company": {
+      "name": "J-Labs",
+      "position": "Senior Frontend Developer",
+      "secondary": "Technical Lead",
+      "url": "https://www.j-labs.pl/",
+      "image": "images/jlabs.svg",
+      "imageEnhancements": []
+    },
+    "period": {
+      "start": "2016-10-01",
+      "end": "2016-12-31"
+    },
+    "description": "I was attached to a big financial corporation, where I was responsible for reviewing projects, recruiting developers and building internal tools (also Chrome extensions). They were mostly tools which will increase the productivity of selected teams, i.e. tools which makes working with translations or AEM (Adobe Experience Manager) easier for either developers or content teams."
+  },
+  {
+    "selected": true,
+    "company": {
+      "name": "Grand Parade",
+      "position": "Senior Frontend Developer",
+      "secondary": "Technical Lead",
+      "url": "https://grandparade.co.uk/",
+      "image": "images/grandparade.png",
+      "imageEnhancements": []
+    },
+    "period": {
+      "start": "2015-06-01",
+      "end": "2016-09-30"
+    },
+    "description": "As a technical leader in a software house specializing in bookmaker and casino platforms, I led React adoption, modernized frontend technologies, and designed scalable architectures. I mentored developers, conducted recruitment, and led frontend and Node.js backend development for a high-performance betting platform. I also guided teams through architectural challenges and deadline-driven projects."
+  },
+  {
+    "company": {
+      "name": "TribeCoders",
+      "position": "Senior Frontend Developer",
+      "secondary": "Technical Lead",
+      "image": "images/tribecoders.png",
+      "imageEnhancements": ["black"]
+    },
+    "period": {
+      "start": "2014-05-01",
+      "end": "2015-04-30"
+    },
+    "description": "Developed and optimized front-end applications with AngularJS, Backbone.js, and PhoneGap while contributing to back-end work in Scala, CakePHP, and Ruby on Rails. Improved UX, search, and architecture for diverse projects, including high-traffic platforms. Provided technical leadership, mentoring, and support under critical deadlines."
+  },
+  {
+    "selected": true,
+    "company": {
+      "name": "Codete",
+      "position": "Web Application Developer",
+      "url": "https://codete.com/",
+      "image": "images/codete.png",
+      "imageEnhancements": []
+    },
+    "period": {
+      "start": "2013-09-01",
+      "end": "2014-05-31"
+    },
+    "description": "Developed and maintained web applications as a full-stack developer using PHP (Yii, Zend), Java (Play), and JavaScript (AngularJS, Node.js, PhoneGap). Led a project management tool, improved an e-commerce platform, and built a WYSIWYG landing page editor, optimizing performance and usability."
+  }
+]

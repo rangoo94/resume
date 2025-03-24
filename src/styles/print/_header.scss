@@ -1,0 +1,60 @@
+@use 'sass:color';
+
+@use '../variables' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3em;
+
+  a {
+    color: #000; // FIXME
+    text-decoration: none;
+  }
+
+  &-photo {
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 8rem;
+    height: 8rem;
+    padding: 0.3rem;
+    border: 0.3rem solid color.mix(#fff, $color-hero-bg-1, 70%); // FIXME
+    margin-right: 1rem;
+  }
+
+  &-target {
+    text-align: center;
+    margin-right: auto;
+  }
+
+  &-name, &-position {
+    line-height: 1em;
+  }
+
+  &-name {
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  &-position {
+    padding-top: 0.8rem;
+    margin-top: 0.8rem;
+    border-top: 0.3rem solid color.mix(#fff, $color-hero-bg-1, 70%); // FIXME
+  }
+
+  &-contact {
+    margin-right: 2rem;
+
+    strong {
+      display: block;
+    }
+  }
+
+  &-social {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+}

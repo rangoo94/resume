@@ -1,0 +1,182 @@
+[
+  {
+    "project": {
+      "name": "Testkube",
+      "brief": "orchestrating tests in Kubernetes"
+    },
+    "period": {
+      "start": "2023-03-01"
+    },
+    "links": [
+      {
+        "type": "repository",
+        "label": "Repository",
+        "url": "https://github.com/kubeshop/testkube"
+      },
+      {
+        "type": "docs",
+        "label": "Documentation",
+        "url": "https://docs.testkube.io"
+      }
+    ],
+    "description": "System for orchestrating tests and other workflows in the Kubernetes clusters."
+  },
+  {
+    "project": {
+      "name": "Sockety",
+      "brief": "fast protocol over TCP"
+    },
+    "period": {
+      "start": "2022-12-01"
+    },
+    "links": [
+      {
+        "type": "docs",
+        "label": "Spec",
+        "url": "https://github.com/sockety/protocol/blob/main/SPECIFICATION.md"
+      },
+      {
+        "type": "repository",
+        "label": "Node.js",
+        "url": "https://github.com/sockety/sockety-js"
+      },
+      {
+        "type": "repository",
+        "label": "Golang",
+        "url": "https://github.com/sockety/sockety-go"
+      }
+    ],
+    "description": "Lightweight protocol over TCP with performance in mind, with Golang and Node.js implementation."
+  },
+  {
+    "project": {
+      "name": "sass-merge"
+    },
+    "period": {
+      "start": "2018-09-01"
+    },
+    "links": [
+      {
+        "type": "repository",
+        "label": "Repository",
+        "url": "https://github.com/PublicInMotionGmbH/sass-merge"
+      },
+      {
+        "type": "npm",
+        "label": "NPM Registry",
+        "url": "https://www.npmjs.com/package/@talixo/sass-merge"
+      }
+    ],
+    "description": "Tool for merging multiple Sass (Sass and SCSS syntax) and CSS files into a single, optimized stylesheet in selected output format."
+  },
+  {
+    "project": {
+      "name": "Talixo UI Kit",
+      "brief": "React UI framework"
+    },
+    "period": {
+      "start": "2018-05-01"
+    },
+    "links": [
+      {
+        "type": "repository",
+        "label": "Repository",
+        "url": "https://github.com/PublicInMotionGmbH/ui-kit"
+      },
+      {
+        "type": "docs",
+        "label": "Storybook",
+        "url": "https://publicinmotiongmbh.github.io/ui-kit/"
+      }
+    ],
+    "description": "Complete UI framework based on React and Sass, which allows pretty good customization. Has 50+ mobile-friendly functional components for wide use."
+  },
+  {
+    "project": {
+      "name": "object-regexp",
+      "brief": "Regular Expressions for objects"
+    },
+    "period": {
+      "start": "2018-01-01"
+    },
+    "links": [
+      {
+        "type": "repository",
+        "label": "Repository",
+        "url": "https://github.com/rangoo94/object-regexp"
+      },
+      {
+        "type": "npm",
+        "label": "NPM Registry",
+        "url": "https://www.npmjs.com/package/object-regexp"
+      }
+    ],
+    "description": "Node.js library, which aims for building matching expression mechanism, using objects instead of text."
+  },
+  {
+    "project": {
+      "name": "universal-lexer",
+      "brief": "ultra-fast dynamic lexer"
+    },
+    "period": {
+      "start": "2018-01-01"
+    },
+    "links": [
+      {
+        "type": "repository",
+        "label": "Repository",
+        "url": "https://github.com/rangoo94/universal-lexer"
+      },
+      {
+        "type": "npm",
+        "label": "NPM Registry",
+        "url": "https://www.npmjs.com/package/universal-lexer"
+      }
+    ],
+    "description": "Node.js library, which may create ultra fast lexer (output only JavaScript code), based on lexical definition. It makes some additional optimizations to basic regular expressions."
+  },
+  {
+    "project": {
+      "name": "easen-models",
+      "brief": "functional models with validation"
+    },
+    "period": {
+      "start": "2017-06-01"
+    },
+    "links": [
+      {
+        "type": "repository",
+        "label": "Repository",
+        "url": "https://github.com/rangoo94/easen-models"
+      },
+      {
+        "type": "npm",
+        "label": "NPM Registry",
+        "url": "https://www.npmjs.com/package/easen-models"
+      }
+    ],
+    "description": "Define models and use them for mapping or/and as validators. Successfully used in multiple production‑ready services."
+  },
+  {
+    "project": {
+      "name": "easen-di",
+      "brief": "dependency injection in JavaScript"
+    },
+    "period": {
+      "start": "2016-08-01"
+    },
+    "links": [
+      {
+        "type": "repository",
+        "label": "Repository",
+        "url": "https://github.com/rangoo94/easen-di"
+      },
+      {
+        "type": "npm",
+        "label": "NPM Registry",
+        "url": "https://www.npmjs.com/package/easen-di"
+      }
+    ],
+    "description": "Provides simple DI container which uses <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy\" rel=\"noopener\" target=\"_blank\">Proxy</a> for safety, lazy loading and additional tooling."
+  }
+]

@@ -1,0 +1,60 @@
+@use 'sass:color';
+
+@use '../variables' as *;
+
+.technologies {
+  &-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.9em;
+    background: rgba(color.mix(#000, $color-primary, 20%), 0.1); // FIXME
+    border-radius: 3px 3px 0 0;
+    padding-top: 0.25em;
+
+    button {
+      cursor: pointer;
+      border: 0;
+      margin: 0 0 -1px;
+      padding: 0.5em 1rem;
+      background: transparent;
+      font: inherit;
+      font-weight: 600;
+      border-radius: 3px 3px 0 0;
+      color: rgba(#000, 0.5); // FIXME
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.be &-navbar button[data-type=be],
+  &.fe &-navbar button[data-type=fe],
+  &.do &-navbar button[data-type=do],
+  &.ms &-navbar button[data-type=ms] {
+    background: #fff; // FIXME
+    color: $color-link;
+  }
+
+  &-explain {
+    background: #fff; // FIXME
+    font-size: 0.85em;
+    border: 1px solid rgba(color.mix(#000, $color-primary, 20%), 0.1); // FIXME
+    padding: 1.2rem 1.5rem 1.5rem;
+    border-radius: 0 0 3px 3px;
+
+    p {
+      margin: 0;
+      display: none;
+    }
+  }
+
+  &.be &-explain p.be,
+  &.fe &-explain p.fe,
+  &.do &-explain p.do,
+  &.ms &-explain p.ms {
+    display: block;
+  }
+}

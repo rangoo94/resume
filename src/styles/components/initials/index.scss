@@ -1,9 +1,0 @@
-@import './config';
-@import './placeholders';
-@import './mixins';
-
-// Use common class for common settings
-
-.initials {
-  @extend %initials;
-}

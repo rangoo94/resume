@@ -1,0 +1,21 @@
+@use '../base';
+@use 'margins';
+@use 'screen';
+@use 'header';
+@use 'section';
+@use 'skillset';
+@use 'highlights';
+@use 'cards';
+
+@use '../variables' as *;
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.processing-agreement {
+  font-size: 0.8em;
+  line-height: 1.2em;
+  opacity: 0.5;
+  text-align: center;
+}

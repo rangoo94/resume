@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dawid Rusnak - Software Engineer & Architect</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">
+        <img data-masked-image class="header-photo" src="/my-photo-2.jpg" alt="<%= person.name %> Photo" />
+        <div class="header-target">
+          <div data-masked class="header-name"><%= person.name %></div>
+          <div class="header-position"><%= person.jobTitle %></div>
+        </div>
+        <div class="header-contact">
+          <strong>e-mail:</strong>
+          <span data-masked><%= person.email.replace('mailto:', '') %></span>
+        </div>
+        <div class="header-contact">
+          <strong>mobile:</strong>
+          <span data-masked><%= person.telephone %></span>
+        </div>
+        <div class="header-social">
+          <a data-masked-attr="href" href="<%= githubUrl %>" rel="noopener" title="GitHub" target="_blank"><%- icons.github %> <span data-masked>rangoo94</span></a>
+          <a  data-masked-attr="href" href="<%= linkedinUrl %>" rel="noopener" title="LinkedIn" target="_blank"><%- icons.linkedin %> <span data-masked>dawidrusnak</span></a>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header"><span>About me</span></div>
+        <div class="section-body">
+          <p>
+            I'm a <strong>software architect and full-stack developer</strong> with experience across
+            <strong>product companies, software houses, and startups</strong>.
+            I specialize in designing and implementing
+            <strong>scalable, high-performance systems, improving architecture, security, and automation</strong>
+            while ensuring maintainability.
+            I enjoy <strong>digging deep into system internals, and refining developer workflows</strong> to enhance efficiency.
+            I focus on driving technical direction, solving complex problems, and enabling teams to build better solutions.
+          </p>
+        </div>
+      </div>
+
+      <section class="highlights">
+        <div class="highlights-entry"><strong>12+</strong> years of experience</div>
+        <div class="highlights-entry"><strong>30+</strong> big projects</div>
+        <div class="highlights-entry"><strong>thousands</strong> PRs and tickets</div>
+      </section>
+
+      <div class="section">
+        <div class="section-header"><span>Technologies & skills</span></div>
+        <div class="section-body">
+          <p>
+            I have worked across a wide range of technologies, methodologies, and architectures,
+            covering <strong>both frontend and backend systems</strong>.
+            I contributed to <strong>all stages of software development</strong>, from architecture to implementation.
+            My background includes <strong>8+ years in technical leadership roles</strong>,
+            where I have driven system design, optimization, and DX improvements.
+            I focus on understanding technologies at a low level,
+            allowing me to <strong>quickly adapt, identify patterns, and efficiently learn</strong> new tools and frameworks.
+          </p>
+
+          <div class="skillset">
+            <strong class="skillset-label">Languages</strong>
+            <div>
+              TypeScript <span class="yrs">(7+ yrs)</span>,
+              JavaScript <span class="yrs">(12+ yrs)</span>,
+              Golang <span class="yrs">(2+ yrs)</span><span class="grey">,
+              Python <span class="yrs">(2+ yrs)</span>,
+              PHP <span class="yrs">(5+ yrs)</span></span>
+            </div>
+
+            <strong class="skillset-label">Backend</strong>
+            <div>
+              Message Queues <span class="yrs">(RabbitMQ, AMQP 1.0, Kafka)</span>,
+              Distributed Systems,
+              Microservices,
+              Containers,
+              Kubernetes
+            </div>
+
+            <strong class="skillset-label">Frontend</strong>
+            <div>
+              React <span class="yrs">(8+ yrs)</span>,
+              Vue <span class="yrs">(2 yrs)</span>,
+              Redux,
+              Zustand<span class="grey">,
+              Angular <span class="yrs">(2 yrs)</span></span>
+            </div>
+
+            <strong class="skillset-label">Databases</strong>
+            <div>
+              PostgreSQL <span class="yrs">(6+ yrs)</span>,
+              MongoDB <span class="yrs">(4+ yrs)</span>,
+              ElasticSearch,
+              Redis
+            </div>
+
+            <strong class="skillset-label">Various</strong>
+            <div>
+              Performance <span class="yrs">(analysis & optimization)</span>,
+              Developer Experience <span class="yrs">(automation)</span>,
+              Software Architecture <span class="yrs">(frontend & backend)</span>,
+              CI/CD, Terraform, Helm Chart
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header"><span>Selected experience</span></div>
+        <div class="section-body">
+          <div class="cards">
+            <% for (const project of projects.filter(x => !x.skipped && x.selected)) { %>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-header">
+                  <span class="card-title"><%= project.company.position %><% if (project.company.secondary) { %> <small>and <%= project.company.secondary %></small><% } %></span><span class="card-at card-at--prefixed"><%= project.company.name %></span>
+                </div>
+                <div class="card-time">
+                  <span class="card-start"><%- formatWorkDate(project.period.start) %></span>
+                  <span class="card-end"><%- project.period.end ? formatWorkDate(project.period.end) : 'now' %></span>
+                  <span class="card-period"><%- formatWorkPeriod(project.period.start, project.period.end) %></span>
+                </div>
+                <div class="card-description">
+                  <%- project.description %>
+                </div>
+              </div>
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+
+      <div class="processing-agreement">
+        I hereby agree for processing the following personal information strictly for the purposes of job recruitment in accordance with the regulation for the protection of personal data passed on the following day: 29.08.97r. DzU nr 133 poz. 883.
+      </div>
+    </div>
+  </body>
+</html>

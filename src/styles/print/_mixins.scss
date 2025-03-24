@@ -1,0 +1,15 @@
+@use 'sass:string';
+
+@function generate-spreading-box-shadow($color, $start-x: 0, $start-y: 0, $segments: 50, $step-x: 0, $step-y: 0) {
+  $box-shadow: '';
+
+  @for $segment from 1 through $segments {
+    @if $box-shadow != '' {
+      $box-shadow: '#{$box-shadow}, ';
+    }
+
+    $box-shadow: '#{$box-shadow}#{$start-x + $step-x * $segment} #{$start-y + $step-y * $segment} 0 0 #{$color}';
+  }
+
+  @return string.unquote($box-shadow);
+}

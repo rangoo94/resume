@@ -1,0 +1,30 @@
+@use 'sass:color';
+@use '../variables' as *;
+@use '../base';
+@use 'hero';
+@use 'stars';
+@use 'page';
+@use 'wordcloud';
+@use 'technologies';
+@use 'cards';
+@use 'contact';
+@use 'responsive';
+
+// Dynamics
+
+.js {
+  .navbar {
+    position: fixed;
+  }
+
+  .document--scrolled .navbar {
+    margin-top: 0;
+    font-size: 1.2em;
+    padding-top: 1rem;
+    background: color.mix($color-hero-bg-1, $color-hero-bg-2, 50%);
+  }
+
+  .document--scrolled .stars {
+    opacity: 0;
+  }
+}

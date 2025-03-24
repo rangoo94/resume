@@ -1,0 +1,28 @@
+@use 'sass:color';
+
+@use '../variables' as *;
+@use 'mixins' as *;
+
+.section {
+  &-header {
+    position: relative;
+    display: inline-block;
+    border-radius: 0 0.6rem 0.6rem 0;
+    font-size: 1.5em;
+    font-weight: 500;
+    background: $color-hero-bg-0; // FIXME
+    box-shadow: generate-spreading-box-shadow($color: $color-hero-bg-0, $step-x: -4rem, $segments: 20); // FIXME
+    color: #fff; // FIXME
+    line-height: 1.5em;
+    padding: 0.5rem 2rem 0.5rem 0;
+    margin: -0.2rem 0;
+  }
+
+  &-header + &-body > .cards:first-child {
+    margin-top: 1rem;
+  }
+
+  &-body {
+    font-size: 1.2em;
+  }
+}

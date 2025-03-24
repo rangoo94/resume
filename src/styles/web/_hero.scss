@@ -1,0 +1,120 @@
+@use '../variables' as *;
+@use 'placeholders' as *;
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 31rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $color-hero-bg-2;
+  background: radial-gradient($color-hero-bg-1, $color-hero-bg-2);
+  color: $color-hero-text;
+
+  &-content {
+    @extend %container;
+    text-align: center;
+  }
+
+  &-name, &-title {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+  }
+
+  &-name {
+    font-size: 5.7em;
+    font-weight: 700;
+  }
+
+  &-title {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: $color-hero-title;
+  }
+
+  &-ellipse {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    svg {
+      display: block;
+      height: 50px;
+      min-width: 1900px;
+      fill: #fff;
+    }
+  }
+}
+
+.navbar {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 1.35em;
+  padding: 4rem 0 1rem;
+  will-change: padding, margin-top, font-size;
+  transition: 200ms all linear;
+
+  &-content {
+    @extend %container;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .resume-link {
+      margin-left: auto;
+    }
+  }
+}
+
+.social-link {
+  color: $color-hero-link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 2em;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  box-shadow: 0 0 2rem 0.3rem $color-hero-bg-0;
+  transition: 300ms all linear;
+
+  &:hover {
+    color: $color-hero-text;
+  }
+}
+
+.resume-link {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 2em;
+  border-radius: 1em;
+  padding: 0 2rem;
+  border: 3px solid $color-hero-link;
+  background: $color-hero-link;
+  box-shadow: 0 0 2rem 0.3rem $color-hero-bg-0;
+  color: $color-hero-bg-3;
+  transition: 300ms all linear;
+
+  &:hover {
+    background-color: $color-hero-text;
+    border-color: $color-hero-text;
+    color: $color-hero-bg-1;
+  }
+}

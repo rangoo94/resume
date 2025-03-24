@@ -1,0 +1,37 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:dawid@drcode.pl",
+  "image": "https://www.drcode.pl/my-photo.jpg",
+  "name": "Dawid Rusnak",
+  "jobTitle": "Software Engineer and Architect",
+  "description": "Full-Stack Developer and Software Architect, who specializes in React on front-end and Node.js/Golang in back-end.",
+  "birthPlace": "Cracow, Poland",
+  "birthDate": "1994.11.28",
+  "gender": "male",
+  "nationality": "Poland",
+  "telephone": "+48 536 543 210",
+  "vatID": "PL9442246323",
+  "url": "https://www.drcode.pl",
+  "sameAs": [
+    "https://www.facebook.com/rangoo94",
+    "https://www.linkedin.com/in/dawidrusnak/",
+    "https://github.com/rangoo94",
+    "https://www.npmjs.com/~rangoo"
+  ],
+  "knowsAbout": [
+    "Typescript",
+    "Javascript",
+    "Back-end",
+    "Golang",
+    "Front-end",
+    "React",
+    "Node.js",
+    "Kubernetes",
+    "Software Architecture"
+  ],
+  "knowsLanguage": [
+    "pl",
+    "en"
+  ]
+}

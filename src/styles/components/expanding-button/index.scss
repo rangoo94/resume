@@ -1,9 +1,0 @@
-@import './config';
-@import './placeholders';
-@import './mixins';
-
-// Use common class for common settings
-
-.expanding-button {
-  @extend %expanding-button;
-}

@@ -1,0 +1,53 @@
+@use '../variables' as *;
+
+$print-margin-left-real: $print-margin-left - $print-margin-left-virtual;
+$print-margin-top-real: $print-margin-top - $print-margin-top-virtual;
+$print-margin-right-real: $print-margin-right - $print-margin-right-virtual;
+$print-margin-bottom-real: $print-margin-bottom - $print-margin-bottom-virtual;
+
+@if ($print-margin-left-virtual > $print-margin-left) {
+  @error 'Virtual margin can\'t be bigger than full one';
+}
+
+@if ($print-margin-right-virtual > $print-margin-right) {
+  @error 'Virtual margin can\'t be bigger than full one';
+}
+
+@if ($print-margin-top-virtual > $print-margin-top) {
+  @error 'Virtual margin can\'t be bigger than full one';
+}
+
+@if ($print-margin-bottom-virtual > $print-margin-bottom) {
+  @error 'Virtual margin can\'t be bigger than full one';
+}
+
+@page {
+  size: $print-width $print-height;
+  margin: $print-margin-top-real $print-margin-right-real $print-margin-bottom-real $print-margin-left-real;
+}
+
+html {
+  font-size: 2.5mm;
+}
+
+@media only print {
+  html, body, #app {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    min-height: initial;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  #app {
+    padding: $print-margin-top-virtual $print-margin-right-virtual $print-margin-bottom-virtual $print-margin-left-virtual;
+
+    &:before, &:after {
+      display: none;
+    }
+  }
+}
+

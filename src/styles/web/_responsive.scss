@@ -1,0 +1,178 @@
+@media (max-width: 1000px) {
+  .word-cloud {
+    display: none;
+  }
+}
+
+@media (max-width: 940px) {
+  .stars {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-body--columns {
+    gap: 4em;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero {
+    height: auto;
+    padding: 10rem 0 4rem;
+  }
+
+  .hero-name {
+    font-size: 3em;
+  }
+
+  .hero-title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cards--two {
+    display: block;
+
+    .card:nth-child(n+1) {
+      border-top-width: 1px;
+    }
+  }
+
+  .technologies {
+    font-size: 0.9em;
+
+    &-explain {
+      font-size: 0.9em;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .page-header h2 {
+    text-decoration: underline;
+    text-decoration-color: #ccc; // FIXME
+
+    &::before, &::after {
+      display: none;
+    }
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &-image img {
+      width: auto;
+      min-width: auto;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .page-header {
+    font-size: 1.5em;
+  }
+
+  .page-body {
+    text-align: initial;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-entry {
+      display: block;
+      text-align: center;
+      width: 30%;
+
+      strong {
+        display: block;
+      }
+
+      &--sole {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .page-body--columns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .card-image {
+    display: none;
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .company {
+    display: block;
+
+    &-entry {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      width: auto;
+
+      strong {
+        display: inline;
+      }
+    }
+  }
+
+  .technologies-navbar {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero-name {
+    font-size: 2.5em;
+  }
+
+  .hero-title {
+    font-size: 1.5em;
+  }
+
+  .hero-ellipse, .page-ellipse {
+    display: none;
+  }
+
+  .technologies-navbar {
+    button {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .technologies-navbar {
+    font-size: 0.7em;
+  }
+}

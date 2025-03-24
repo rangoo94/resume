@@ -1,0 +1,44 @@
+@use '../web/cards'; // FIXME
+
+.card {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1.1em;
+
+  &-content {
+    display: grid;
+    grid-template-areas: "header time"  "content content";
+    grid-template-rows: max-content max-content;
+    grid-template-columns: auto auto;
+  }
+
+  &-header {
+    grid-area: header;
+    line-height: 1em;
+    white-space: nowrap;
+  }
+
+  &-time {
+    grid-area: time;
+    margin-left: auto;
+    display: flex;
+  }
+
+  &-period {
+    order: -1;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "•";
+      margin: 0 1mm;
+    }
+  }
+
+  &-description {
+    grid-area: content;
+    margin-top: 0.3rem;
+  }
+}

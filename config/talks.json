@@ -1,0 +1,75 @@
+[
+  {
+    "conference": {
+      "name": "CareerCon",
+      "image": "images/karierait.png",
+      "imageEnhancements": []
+    },
+    "subject": {
+      "name": "Metaprogramming in JS"
+    },
+    "period": {
+      "start": "2017-09-01"
+    },
+    "links": [
+      {
+        "type": "slideshow",
+        "label": "Slides",
+        "url": "https://www.slideshare.net/slideshow/metaprogramowanie-w-js-83178995/83178995"
+      }
+    ],
+    "description": "I made a presentation about metaprogramming in JavaScript, mostly focused on reflective programming. It was prepared with junior/regular developers in mind."
+  },
+  {
+    "conference": {
+      "name": "Code Europe",
+      "image": "images/codeeurope.png",
+      "imageEnhancements": []
+    },
+    "subject": {
+      "name": "Node.js behind: V8 engine and its optimizations"
+    },
+    "period": {
+      "start": "2017-04-01"
+    },
+    "links": [
+      {
+        "type": "slideshow",
+        "label": "Slides",
+        "url": "https://www.slideshare.net/slideshow/nodejs-behind-v8-and-its-optimizations/75401924"
+      },
+      {
+        "type": "video",
+        "label": "Recording",
+        "url": "https://www.youtube.com/watch?v=GgH1DDnzkdI"
+      }
+    ],
+    "description": "I prepared a presentation about JavaScript performance on front‑end and back‑end, mostly basing on the V8 engine. I lead it for 200+ persons on Code Europe 2017 in Kraków, and later for ~100 persons on Meet.js as well."
+  },
+  {
+    "conference": {
+      "name": "SFI",
+      "image": "images/sfi.png",
+      "imageEnhancements": ["tall"]
+    },
+    "subject": {
+      "name": "Real‑time web apps with React/Redux"
+    },
+    "period": {
+      "start": "2016-03-01"
+    },
+    "links": [
+      {
+        "type": "slideshow",
+        "label": "Slides",
+        "url": "https://www.slideshare.net/slideshow/aplikacje-internetowe-realtime-w-oparciu-o-reactredux/59457645"
+      },
+      {
+        "type": "repository",
+        "label": "Repository",
+        "url": "https://github.com/GrandParade/react-redux-workshops"
+      }
+    ],
+    "description": "I have prepared 3‑hour workshops, on which people had an opportunity to learn about React and Redux, and how to work with real‑time data on front‑end (incl. socket.io)."
+  }
+]

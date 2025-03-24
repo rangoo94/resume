@@ -1,0 +1,42 @@
+@use 'sass:color';
+
+// Theme
+$font-family: 'Red Hat Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$color-primary: #29b8f6;
+
+// Colors
+$color-text: #000;
+$color-bg: #fff;
+$color-link: color.mix($color-text, $color-primary, 30%);
+$color-hero-text: #fff;
+$color-hero-title: $color-primary;
+$color-hero-link: $color-primary;
+$color-hero-bg-0: color.mix(#000, $color-primary, 65%);
+$color-hero-bg-1: color.mix(#000, $color-primary, 75%);
+$color-hero-bg-2: color.mix(#000, $color-primary, 85%);
+$color-hero-bg-3: color.mix(#000, $color-primary, 90%);
+
+$color-page-header: color.mix(color.mix(#000, $color-primary, 95%), #fff, 90%);
+$color-page-text: color.mix(color.mix(#000, $color-primary, 95%), #fff, 85%);
+
+$color-card-title: color.mix(#000, $color-primary, 50%);
+
+// Sizes
+
+$hero-height: 500;
+$hero-supported-width: 4000;
+
+// Printing
+
+$print-width: 21cm;
+$print-height: 29.7cm;
+
+$print-margin-left: 1.4cm;
+$print-margin-top: 1cm;
+$print-margin-right: 1.4cm;
+$print-margin-bottom: 1cm;
+
+$print-margin-left-virtual: $print-margin-left;
+$print-margin-top-virtual: 0cm;
+$print-margin-right-virtual: $print-margin-right;
+$print-margin-bottom-virtual: 0cm;

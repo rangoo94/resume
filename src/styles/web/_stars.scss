@@ -1,0 +1,76 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:string';
+
+@use '../variables' as *;
+
+@function stars($n, $color) {
+  $value: '#{math.random($hero-supported-width)-(math.div($hero-supported-width, 2))}px #{math.random($hero-height)}px #{$color}';
+  @for $i from 1 through $n {
+    $x: math.random($hero-supported-width)-(math.div($hero-supported-width, 2));
+    $y: math.random($hero-height);
+    $next: '#{$x}px #{$y}px #{$color}, #{$x}px #{$hero-height+$y}px #{$color}';
+    @if $i == 1 {
+      $value: $next;
+    } @else {
+      $value: '#{$value}, #{$next}';
+    }
+  }
+  @return string.unquote($value);
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 1;
+  will-change: opacity;
+  transition: 300ms linear opacity;
+
+  > :nth-child(1) {
+    width: 1px;
+    height: 1px;
+    opacity: 0.5;
+    box-shadow: stars(285, $color-hero-text);
+    animation: stars-parallax 7.15s linear infinite;
+  }
+
+  > :nth-child(2) {
+    width: 2px;
+    height: 2px;
+    opacity: 0.6;
+    box-shadow: stars(55, $color-hero-text);
+    animation: stars-parallax 14.3s linear infinite;
+  }
+
+  > :nth-child(3) {
+    width: 3px;
+    height: 3px;
+    box-shadow: stars(35, $color-hero-text);
+    animation: stars-parallax 21.45s linear infinite;
+  }
+
+  > :nth-child(4) {
+    width: 2px;
+    height: 2px;
+    opacity: 0.4;
+    box-shadow: stars(35, $color-hero-text);
+    animation: stars-parallax 10.7s linear infinite;
+  }
+
+  > :nth-child(3) {
+    width: 3px;
+    height: 3px;
+    box-shadow: stars(15, $color-hero-text);
+    animation: stars-parallax 28.6s linear infinite;
+  }
+}
+
+@keyframes stars-parallax {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1px * $hero-height);
+  }
+}
