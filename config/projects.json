@@ -11,7 +11,7 @@
     },
     "period": {
       "start": "2023-03-01",
-      "end": null
+      "end": "2025-05-16"
     },
     "description": "I led a frontend re-architecture for modularity and code reuse, then designed and implemented a backend for new test orchestration system (<a href=\"https://docs.testkube.io/articles/test-workflows-high-level-architecture\" rel=\"noopener\" target=\"_blank\">Test&nbsp;Workflows</a>), enabling scalable, flexible, and distributed Kubernetes-based execution. I prepared a full system re-architecture to enhance security, performance, and multi-cluster support. As a technical leader, I drove architectural decisions, optimized scalability, and mentored the team while working with Golang, React, NATS, and MongoDB."
   },
