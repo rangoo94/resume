@@ -12,6 +12,7 @@
   { "type": ["be"], "name": "Node.js", "weight": 3 },
   { "type": ["db"], "name": "ElasticSearch", "weight": 1 },
   { "type": ["db"], "name": "Redis", "weight": 4 },
+  { "type": ["db"], "name": "DynamoDB", "weight": 2 },
   { "type": ["db"], "name": "PostgreSQL", "weight": 7 },
   { "type": ["db"], "name": "MongoDB", "weight": 6 },
   { "type": ["ms"], "name": "RabbitMQ", "weight": 5 },
