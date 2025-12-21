@@ -10,6 +10,7 @@
     grid-template-areas: "header time"  "content content";
     grid-template-rows: max-content max-content;
     grid-template-columns: auto auto;
+    width: 100%;
   }
 
   &-header {

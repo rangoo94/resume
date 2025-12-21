@@ -2,6 +2,18 @@
   {
     "selected": true,
     "company": {
+      "name": "Cast AI",
+      "position": "Software Developer",
+      "url": "https://www.cast.ai",
+      "image": "images/castai.svg"
+    },
+    "period": {
+      "start": "2025-07-01"
+    }
+  },
+  {
+    "selected": true,
+    "company": {
       "name": "Testkube",
       "position": "Full-stack Developer",
       "secondary": "Technical Lead",
@@ -13,7 +25,7 @@
       "start": "2023-03-01",
       "end": "2025-05-16"
     },
-    "description": "I led a frontend re-architecture for modularity and code reuse, then designed and implemented a backend for new test orchestration system (<a href=\"https://docs.testkube.io/articles/test-workflows-high-level-architecture\" rel=\"noopener\" target=\"_blank\">Test&nbsp;Workflows</a>), enabling scalable, flexible, and distributed Kubernetes-based execution. I prepared a full system re-architecture to enhance security, performance, and multi-cluster support. As a technical leader, I drove architectural decisions, optimized scalability, and mentored the team while working with Golang, React, NATS, and MongoDB."
+    "description": "I led a FE rearchitecture for modularity, then designed and implemented a backend for new test orchestration system (<a href=\"https://docs.testkube.io/articles/test-workflows-high-level-architecture\" rel=\"noopener\" target=\"_blank\">Test&nbsp;Workflows</a>), enabling scalable, flexible, and distributed Kubernetes-based execution. I prepared a full system re-architecture to enhance security, performance, and multi-cluster support. As a technical leader, I drove architectural decisions, optimized scalability, and mentored the team while working with Golang, React, NATS, and MongoDB."
   },
   {
     "selected": true,
@@ -45,7 +57,7 @@
       "start": "2018-03-01",
       "end": "2019-02-28"
     },
-    "description": "I led front-end rearchitecture of a transportation platform, migrating from jQuery to React + Redux. Built a WYSIWYG editor reducing landing page setup from days to minutes. Optimized Python/Django backend, improved scalability, mentored engineers, and enhanced software delivery processes. Contributed to open-source UI Kit and SCSS tooling."
+    "description": "I led FE rearchitecture of a transportation platform, migrating from jQuery to React + Redux. Built a WYSIWYG editor reducing setup from days to minutes. Optimized Python/Django backend, improved scalability, mentored engineers, and enhanced SDLC. Contributed to open-source UI Kit and SCSS tooling."
   },
   {
     "selected": true,
